@@ -1,2 +1,640 @@
-# RAJA-BALAP-KARUNG-SULTAN
-0
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="#0b1020" name="theme-color"/>
+<meta content="Dashboard admin minigame lengkap dengan tiket, bonus random, video background, filter tanggal, dan permission management." name="description"/>
+<link href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Cdefs%3E%3ClinearGradient id=%22g%22 x2=%221%22 y2=%221%22%3E%3Cstop stop-color=%22%237c5cff%22/%3E%3Cstop offset=%221%22 stop-color=%22%234ea7ff%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%2264%22 height=%2264%22 rx=%2218%22 fill=%22url(%23g)%22/%3E%3Ctext x=%2232%22 y=%2240%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2223%22 font-weight=%22900%22 fill=%22white%22%3EMG%3C/text%3E%3C/svg%3E" rel="icon"/>
+<title>Minigame Admin Enterprise 2026</title>
+<style>
+:root{
+  --bg:#050811;--panel:#0d1322;--panel-2:#111a2c;--panel-rgb:13,19,34;--text:#f7f8ff;--muted:#9ba8c3;
+  --line:rgba(255,255,255,.10);--primary:#7c5cff;--accent:#4ea7ff;--success:#29d391;--warning:#ffbd59;--danger:#ff627d;
+  --radius:20px;--glass:.88;--shadow:0 22px 70px rgba(0,0,0,.35);--sidebar:278px;--topbar:74px
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.45;overflow-x:hidden}button,input,select,textarea{font:inherit}button{cursor:pointer}a{color:inherit;text-decoration:none}h1,h2,h3,p{margin-top:0}h1{font-size:clamp(26px,3vw,38px);line-height:1.08;margin-bottom:8px}h2{font-size:26px}h3{font-size:17px;margin-bottom:0}.hidden{display:none!important}.muted{color:var(--muted)}.small{font-size:12px}.full{width:100%}.wide,.full-row{grid-column:1/-1}
+body:before{content:"";position:fixed;inset:0;background:radial-gradient(circle at 18% 8%,rgba(124,92,255,.22),transparent 32%),radial-gradient(circle at 86% 16%,rgba(78,167,255,.13),transparent 31%),linear-gradient(145deg,#050811,#080c16 48%,#04060b);z-index:-3}
+.login-screen{min-height:100vh;display:grid;place-items:center;padding:24px}.login-shell{width:min(1180px,100%);min-height:690px;display:grid;grid-template-columns:1.15fr .85fr;border:1px solid var(--line);border-radius:30px;overflow:hidden;background:rgba(8,12,22,.9);box-shadow:0 35px 120px rgba(0,0,0,.55)}.login-hero{position:relative;padding:64px;display:flex;flex-direction:column;justify-content:center;background:linear-gradient(145deg,rgba(124,92,255,.25),rgba(6,10,19,.88)),radial-gradient(circle at 72% 22%,rgba(78,167,255,.25),transparent 34%)}.login-hero:after{content:"";position:absolute;width:340px;height:340px;border-radius:44% 56% 56% 44%;right:-90px;bottom:-80px;border:1px solid rgba(255,255,255,.12);box-shadow:0 0 0 40px rgba(124,92,255,.04),0 0 0 90px rgba(124,92,255,.025);transform:rotate(28deg)}.login-hero h1{font-size:clamp(38px,5vw,66px);max-width:750px;margin:42px 0 20px;letter-spacing:-2.5px}.login-hero>p{font-size:17px;max-width:650px;color:#c8d0e2}.hero-points{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:36px;position:relative;z-index:1}.hero-point{display:flex;flex-direction:column;gap:5px;padding:17px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.045);backdrop-filter:blur(12px)}.login-panel{padding:58px 52px;display:flex;flex-direction:column;justify-content:center;background:rgba(7,10,18,.82)}.login-panel>p{color:var(--muted);margin-bottom:28px}.demo-box,.notice,.permission-note{border:1px solid rgba(124,92,255,.28);background:rgba(124,92,255,.09);padding:14px 16px;border-radius:14px;color:#bbc5da;font-size:13px}.demo-box{margin-top:24px;line-height:1.65}
+.brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:.4px}.brand-mark{width:40px;height:40px;display:grid;place-items:center;border-radius:13px;background:linear-gradient(145deg,var(--primary),var(--accent));box-shadow:0 8px 24px color-mix(in srgb,var(--primary) 38%,transparent);color:white;font-size:14px}.app{min-height:100vh}.dashboard-background{position:fixed;inset:0;z-index:-2;overflow:hidden;pointer-events:none}.dashboard-background img,.dashboard-background video{position:absolute;width:100%;height:100%;object-fit:cover;display:none}.dashboard-bg-overlay{position:absolute;inset:0;background:rgba(4,7,14,.68)}.sidebar{position:fixed;left:0;top:0;bottom:0;width:var(--sidebar);padding:22px 17px 20px;background:rgba(7,11,20,.94);border-right:1px solid var(--line);backdrop-filter:blur(22px);overflow-y:auto;z-index:30;transition:.25s}.sidebar .brand{padding:4px 10px 22px}.nav-label{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:#6f7c96;padding:18px 12px 7px;font-weight:800}.nav-item{display:flex;width:100%;align-items:center;gap:12px;border:0;color:#aab5ca;background:transparent;padding:11px 12px;border-radius:12px;margin:2px 0;text-align:left;transition:.18s}.nav-item:hover{background:rgba(255,255,255,.055);color:#fff}.nav-item.active{color:white;background:linear-gradient(135deg,color-mix(in srgb,var(--primary) 28%,transparent),color-mix(in srgb,var(--accent) 12%,transparent));box-shadow:inset 0 0 0 1px rgba(255,255,255,.07)}.nav-icon{width:23px;text-align:center;font-size:17px}.sidebar-footer{margin-top:24px;padding:14px 8px 2px;border-top:1px solid var(--line)}.main{margin-left:var(--sidebar);min-height:100vh}.topbar{height:var(--topbar);position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:0 28px;background:rgba(5,8,17,.82);border-bottom:1px solid var(--line);backdrop-filter:blur(22px)}.topbar-left,.topbar-right,.page-actions,.toolbar,.admin-mini,.color-row,.login-row,.theme-media-status,.reward-panel-head{display:flex;align-items:center;gap:12px}.admin-mini{min-width:0}.avatar{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(145deg,var(--primary),var(--accent));font-weight:900;font-size:12px}.global-search{position:relative;width:min(420px,42vw)}.global-search .input{padding-left:40px}.search-mark{position:absolute;left:14px;top:50%;transform:translateY(-50%);z-index:1;color:var(--muted);font-size:20px}.mobile-menu{display:none!important}.content{padding:30px;max-width:1800px;margin:0 auto}.page{display:none;animation:fade .22s ease}.page.active{display:block}@keyframes fade{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}.page-head{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;margin-bottom:24px}.page-head p{color:var(--muted);margin:0}.dashboard-filter-label{display:inline-block;margin-left:9px;padding:3px 8px;border-radius:99px;background:rgba(124,92,255,.13);color:#d1c8ff;font-size:11px}.grid{display:grid;gap:18px}.stats-grid{grid-template-columns:repeat(6,minmax(0,1fr))}.dashboard-grid{grid-template-columns:minmax(0,1.55fr) minmax(320px,.75fr);margin-top:18px}.two-col{grid-template-columns:repeat(2,minmax(0,1fr))}.game-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.card{border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}.glass{background:rgba(var(--panel-rgb),var(--glass));backdrop-filter:blur(18px)}.card-head,.table-toolbar,.modal-head{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:18px}.stat-card{min-height:140px;position:relative;overflow:hidden}.stat-card:after{content:"";position:absolute;width:90px;height:90px;border-radius:50%;right:-28px;bottom:-34px;background:var(--tone,rgba(124,92,255,.16));filter:blur(2px)}.stat-icon{width:36px;height:36px;display:grid;place-items:center;border-radius:11px;background:var(--tone,rgba(124,92,255,.15));margin-bottom:18px}.stat-value{font-size:28px;font-weight:900;letter-spacing:-1px}.stat-label{color:var(--muted);font-size:12px;margin-top:4px}.stat-delta{font-size:11px;color:var(--success);margin-top:8px}.chart-wrap{height:310px;position:relative}.activity-list{display:flex;flex-direction:column;gap:10px}.activity-item{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:11px;padding:11px;border-radius:13px;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.055)}.activity-item>div:nth-child(2){min-width:0}.activity-item b,.activity-item span{display:block}.activity-item span{font-size:11px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.activity-badge{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:rgba(124,92,255,.16);color:#d8d1ff;font-weight:900;font-size:11px}.kpi-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.kpi-strip>div{padding:14px;border-radius:14px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06)}.kpi-strip b{display:block;font-size:21px;margin-top:6px}.performance-row{display:grid;grid-template-columns:1fr auto;gap:10px;margin:12px 0}.progress{grid-column:1/-1;height:7px;border-radius:99px;background:rgba(255,255,255,.07);overflow:hidden}.progress i{display:block;height:100%;border-radius:inherit;background:linear-gradient(90deg,var(--primary),var(--accent))}
+.input,.select,textarea.input{width:100%;border:1px solid var(--line);background:rgba(5,9,17,.68);color:white;border-radius:12px;padding:11px 13px;outline:none;transition:.18s}.input:focus,.select:focus{border-color:color-mix(in srgb,var(--primary) 72%,white);box-shadow:0 0 0 3px color-mix(in srgb,var(--primary) 15%,transparent)}.select option{background:#101725;color:white}textarea.input{resize:vertical;min-height:100px}.field{display:flex;flex-direction:column;gap:7px;margin-bottom:14px}.field label{font-size:12px;color:#c8d0e0;font-weight:700}.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 14px}.form-actions{grid-column:1/-1;display:flex;justify-content:flex-end;gap:10px;margin-top:7px}.password-wrap{position:relative}.password-wrap .input{padding-right:48px}.password-wrap .icon-btn{position:absolute;right:5px;top:5px}.checkbox{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted)}.login-row{justify-content:space-between;margin:3px 0 18px}.btn,.mini-btn,.icon-btn{border:0;color:white;font-weight:800;transition:.18s}.btn{padding:11px 16px;border-radius:12px;background:linear-gradient(135deg,var(--primary),color-mix(in srgb,var(--primary) 48%,var(--accent)));box-shadow:0 10px 25px color-mix(in srgb,var(--primary) 21%,transparent)}.btn:hover,.mini-btn:hover,.icon-btn:hover{transform:translateY(-1px);filter:brightness(1.08)}.btn.secondary{background:rgba(255,255,255,.06);border:1px solid var(--line);box-shadow:none}.btn.danger{background:linear-gradient(135deg,#e84c67,#ff735e)}.mini-btn{padding:7px 10px;border-radius:9px;background:rgba(255,255,255,.065);border:1px solid var(--line);font-size:11px}.icon-btn{width:38px;height:38px;display:grid;place-items:center;border-radius:11px;background:rgba(255,255,255,.055);border:1px solid var(--line)}.notification-dot{position:absolute;right:6px;top:5px;width:7px;height:7px;background:#ff4f72;border-radius:50%;box-shadow:0 0 0 3px #080c15}.status{display:inline-flex;align-items:center;padding:5px 9px;border-radius:999px;font-size:10px;font-weight:900;text-transform:uppercase;letter-spacing:.45px;background:rgba(255,255,255,.07);color:#bdc7d9}.status.active{background:rgba(41,211,145,.12);color:#75efbd}.status.draft,.status.scheduled{background:rgba(255,189,89,.12);color:#ffd182}.status.disabled,.status.expired,.status.maintenance{background:rgba(255,98,125,.12);color:#ff9aad}.status.done,.status.finished{background:rgba(78,167,255,.12);color:#90caff}.date-input{min-width:145px}.dashboard-date-picker{display:flex;gap:8px}
+.table-card{padding:0;overflow:hidden}.table-card>.table-toolbar{padding:18px 20px;margin:0;border-bottom:1px solid var(--line)}.table-wrap{overflow:auto}.data-table{width:100%;border-collapse:collapse;min-width:850px}.data-table th,.data-table td{padding:13px 15px;border-bottom:1px solid rgba(255,255,255,.055);text-align:left;font-size:12px;vertical-align:middle}.data-table th{font-size:10px;text-transform:uppercase;letter-spacing:.65px;color:#74819a;background:rgba(255,255,255,.018);position:sticky;top:0}.data-table tbody tr:hover{background:rgba(255,255,255,.026)}.table-actions{display:flex;gap:6px;flex-wrap:wrap}.empty-state{padding:48px 20px;text-align:center;color:var(--muted)}.empty-state b{display:block;color:white;margin-bottom:6px}.pill-list{display:flex;gap:6px;flex-wrap:wrap}.pill{padding:5px 8px;border-radius:8px;background:rgba(124,92,255,.11);border:1px solid rgba(124,92,255,.18);font-size:11px;color:#d2caff}
+.reward-panel{grid-column:1/-1;border:1px solid rgba(124,92,255,.22);background:rgba(124,92,255,.055);border-radius:16px;padding:15px;margin-bottom:14px}.reward-panel-head{justify-content:space-between;margin-bottom:14px}.reward-panel-head span{display:block;margin-top:3px}.reward-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}.reward-hint{font-size:11px;color:var(--muted);margin-top:11px}.ticket-bonus-preview{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px;padding:11px;border-radius:12px;background:rgba(4,7,13,.42);min-height:42px}.empty-preview{color:var(--muted);font-size:11px;align-items:center}.video-upload-box{border:1px dashed rgba(255,255,255,.16);border-radius:14px;padding:14px}.theme-media-status{justify-content:space-between;margin-top:10px}.color-row .input{flex:1}.color-row input[type=color]{width:48px;height:42px;border:0;background:transparent}.theme-preview{position:relative;min-height:430px;border-radius:18px;overflow:hidden;background:radial-gradient(circle at 80% 20%,rgba(78,167,255,.26),transparent 35%),linear-gradient(145deg,#141d39,#080c17 70%);display:flex;align-items:flex-end;padding:26px}.theme-preview>img,.theme-preview>video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:none}.preview-media-overlay{position:absolute;inset:0;background:rgba(4,7,14,.58)}.preview-panel{position:relative;z-index:2;width:min(360px,100%);padding:22px;border-radius:17px;background:rgba(10,15,27,.78);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(14px)}.game-card{position:relative;overflow:hidden}.game-card:before{content:"";position:absolute;width:170px;height:170px;border-radius:50%;right:-75px;top:-70px;background:linear-gradient(135deg,color-mix(in srgb,var(--primary) 24%,transparent),color-mix(in srgb,var(--accent) 14%,transparent))}.game-card>*{position:relative}.game-code{font-size:10px;color:#8d9ab4;text-transform:uppercase;letter-spacing:1px}.game-card h3{font-size:19px;margin:10px 0 7px}.game-meta{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:16px 0}.game-meta div{padding:9px;border-radius:10px;background:rgba(255,255,255,.035);font-size:11px;color:var(--muted)}.game-actions{display:flex;gap:8px;flex-wrap:wrap}.permission-summary{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.permission-summary .card{padding:16px}.permission-grid{display:grid;grid-template-columns:minmax(190px,1.5fr) repeat(10,minmax(70px,.6fr));min-width:1050px}.permission-grid>div{padding:10px;border-bottom:1px solid rgba(255,255,255,.05);font-size:11px;display:flex;align-items:center;justify-content:center}.permission-grid .head{color:#8190a8;font-size:9px;text-transform:uppercase;letter-spacing:.5px;background:rgba(255,255,255,.02);font-weight:900}.permission-grid .feature-name{justify-content:flex-start;font-weight:800}.switch{position:relative;width:38px;height:21px;display:inline-block}.switch input{opacity:0;width:0;height:0}.slider{position:absolute;inset:0;background:#30384a;border-radius:999px;transition:.2s}.slider:before{content:"";position:absolute;width:15px;height:15px;left:3px;top:3px;border-radius:50%;background:white;transition:.2s}.switch input:checked+.slider{background:var(--primary)}.switch input:checked+.slider:before{transform:translateX(17px)}.feature-setting-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.feature-setting{padding:14px;border-radius:14px;border:1px solid rgba(255,255,255,.07);background:rgba(255,255,255,.026)}.feature-setting .field{margin:10px 0 0}.feature-setting-head{display:flex;justify-content:space-between;gap:10px}.login-log{display:flex;flex-direction:column}.login-log-item{display:grid;grid-template-columns:1fr auto;gap:12px;padding:13px;border-bottom:1px solid rgba(255,255,255,.055)}.login-log-item:last-child{border-bottom:0}.login-log-item span{display:block;color:var(--muted);font-size:11px;margin-top:3px}
+.modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.67);z-index:100;display:none;place-items:center;padding:20px}.modal-backdrop.open{display:grid}.modal{width:min(760px,100%);max-height:90vh;overflow:auto;padding:22px}.modal.wide-modal{width:min(1120px,100%)}.modal-head{position:sticky;top:-22px;background:rgba(13,19,34,.96);padding:4px 0 14px;z-index:2}.toast-area{position:fixed;right:18px;bottom:18px;z-index:120;display:flex;flex-direction:column;gap:8px}.toast{min-width:260px;max-width:420px;padding:13px 15px;border-radius:12px;background:#141c2c;border:1px solid var(--line);box-shadow:var(--shadow);animation:toastIn .24s ease}.toast.success{border-color:rgba(41,211,145,.35)}.toast.error{border-color:rgba(255,98,125,.4)}@keyframes toastIn{from{opacity:0;transform:translateX(20px)}to{opacity:1;transform:none}}
+.quick-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.quick-card{border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.035);padding:16px;color:white;text-align:left}.quick-card b{display:block;margin-bottom:5px}.quick-card span{font-size:11px;color:var(--muted)}.mini-game{position:relative;height:420px;border-radius:18px;overflow:hidden;background:linear-gradient(#1b2845 0 54%,#222a2e 54%);border:1px solid var(--line)}.mini-game-track{position:absolute;left:8%;right:8%;bottom:8%;height:38%;border-radius:50% 50% 14px 14px;background:repeating-linear-gradient(90deg,rgba(255,255,255,.04) 0 25%,rgba(0,0,0,.08) 25% 50%);border:3px solid rgba(255,255,255,.15);transform:perspective(500px) rotateX(32deg)}.runner{position:absolute;bottom:20%;left:12%;font-size:36px;transition:left 2.5s cubic-bezier(.15,.7,.22,1)}.runner.r2{bottom:29%}.runner.r3{bottom:38%}.mini-game.running .runner:nth-of-type(1){left:82%}.mini-game.running .runner.r2{left:75%}.mini-game.running .runner.r3{left:88%}.game-console{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:12px}.badge-number{font-size:24px;font-weight:900}.footer-note{text-align:center;color:#66758f;font-size:11px;padding:28px 0 4px}
+@media(max-width:1450px){.stats-grid{grid-template-columns:repeat(3,1fr)}.game-grid{grid-template-columns:repeat(2,1fr)}.feature-setting-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:1050px){:root{--sidebar:250px}.dashboard-grid,.two-col{grid-template-columns:1fr}.login-shell{grid-template-columns:1fr}.login-hero{display:none}.login-panel{min-height:650px;max-width:none}.feature-setting-grid{grid-template-columns:1fr}.permission-summary{grid-template-columns:1fr 1fr}.kpi-strip{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:820px){.sidebar{transform:translateX(-102%);box-shadow:40px 0 80px rgba(0,0,0,.5)}.sidebar.open{transform:none}.main{margin-left:0}.mobile-menu{display:grid!important}.topbar{padding:0 14px}.content{padding:20px 14px}.page-head{flex-direction:column}.page-actions{width:100%;flex-wrap:wrap}.global-search{width:min(420px,52vw)}.stats-grid{grid-template-columns:repeat(2,1fr)}.game-grid{grid-template-columns:1fr}.permission-summary{grid-template-columns:1fr}.hide-mobile{display:none!important}.login-panel{padding:40px 30px}}
+@media(max-width:570px){.login-screen{padding:0}.login-shell{border:0;border-radius:0;min-height:100vh}.login-panel{padding:30px 20px}.form-grid,.reward-grid{grid-template-columns:1fr}.field,.full-row,.wide{grid-column:1}.stats-grid{grid-template-columns:1fr 1fr;gap:11px}.stat-card{padding:14px;min-height:125px}.stat-value{font-size:23px}.content{padding:17px 10px}.card{padding:15px}.topbar-right{gap:6px}.global-search{width:46vw}.global-search .input{font-size:12px}.page-actions .btn,.page-actions .select{flex:1}.dashboard-date-picker{width:100%}.dashboard-date-picker>*{flex:1}.table-toolbar{align-items:flex-start;flex-direction:column}.table-toolbar .toolbar{width:100%;flex-direction:column;align-items:stretch}.table-toolbar .input,.table-toolbar .select{width:100%!important}.theme-preview{min-height:350px}.quick-grid{grid-template-columns:1fr}.toast-area{left:10px;right:10px;bottom:10px}.toast{min-width:0;max-width:none}.brand span{font-size:12px}.topbar{height:64px}.admin-mini .avatar{width:34px;height:34px}.kpi-strip{grid-template-columns:1fr 1fr}.game-console{align-items:stretch;flex-direction:column}.game-console .btn{width:100%}}
+
+  </style>
+</head>
+<body>
+<section class="login-screen" id="loginScreen">
+<div class="login-shell">
+<div class="login-hero">
+<div class="brand"><div class="brand-mark">MG</div><span>MINIGAME ENTERPRISE 2026</span></div>
+<h1>Control every game campaign from one premium dashboard.</h1>
+<p>Kelola member, tiket, event, tema, hadiah, webhook, aktivitas pemain, dan laporan dalam satu pusat kontrol yang ringan dan responsif.</p>
+<div class="hero-points">
+<div class="hero-point"><b>Multi Event</b><span class="muted small">Gunakan ulang dashboard untuk campaign berikutnya.</span></div>
+<div class="hero-point"><b>Ticket Control</b><span class="muted small">Pantau tiket dibuat, digunakan, tersisa, dan expired.</span></div>
+<div class="hero-point"><b>Webhook Ready</b><span class="muted small">Terhubung ke Google Apps Script atau backend lainnya.</span></div>
+<div class="hero-point"><b>Role Based</b><span class="muted small">Super Admin, Admin Event, dan Viewer.</span></div>
+</div>
+</div>
+<div class="login-panel">
+<div class="brand" style="margin-bottom:34px"><div class="brand-mark">MG</div><span>ADMIN CONTROL CENTER</span></div>
+<h2>Selamat datang kembali</h2>
+<p>Masuk untuk mengelola seluruh minigame dan campaign.</p>
+<form id="loginForm">
+<div class="field">
+<label>Email Admin</label>
+<input autocomplete="username" class="input" id="loginEmail" required="" type="email" value="zaramanis1233@gmail.com"/>
+</div>
+<div class="field">
+<label>Password</label>
+<div class="password-wrap">
+<input autocomplete="current-password" class="input" id="loginPassword" required="" type="password" value="Click8899@"/>
+<button class="icon-btn" id="togglePassword" type="button">👁</button>
+</div>
+</div>
+<div class="login-row">
+<label class="checkbox"><input checked="" id="rememberMe" type="checkbox"/> Ingat perangkat ini</label>
+<a href="#" id="forgotPassword" style="color:#bfaeff">Lupa password?</a>
+</div>
+<button class="btn full" type="submit">MASUK KE DASHBOARD</button>
+</form>
+<div class="demo-box">
+<b style="color:#fff">Akun Bawaan Standalone</b><br/>
+          Super Admin: <b>zaramanis1233@gmail.com</b> / <b>Click8899@</b><br/>
+          Admin Kedua: <b>admin2@minigame.local</b> / <b>Admin123!</b><br/>
+          Staff: <b>staff@minigame.local</b> / <b>Staff123!</b><br/><br/>
+          Data disimpan pada browser perangkat ini. Seluruh HTML, CSS, JavaScript, ikon, data dummy, dan preview game sudah berada di file index.html ini.
+        </div>
+</div>
+</div>
+</section>
+<div class="app hidden" id="app">
+<div aria-hidden="true" class="dashboard-background" id="dashboardBackground">
+<img alt="" id="dashboardBgImage" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="/>
+<video autoplay="" id="dashboardBgVideo" loop="" muted="" playsinline="" preload="metadata"></video>
+<div class="dashboard-bg-overlay" id="dashboardBgOverlay"></div>
+</div>
+<aside class="sidebar" id="sidebar">
+<div class="brand"><div class="brand-mark">MG</div><span>MINIGAME 2026</span></div>
+<div class="nav-label">Overview</div>
+<button class="nav-item active" data-page="dashboard" type="button"><span class="nav-icon">⌂</span><span>Dashboard</span></button>
+<div class="nav-label">Management</div>
+<button class="nav-item" data-page="members" type="button"><span class="nav-icon">👥</span><span>Member Management</span></button>
+<button class="nav-item" data-page="tickets" type="button"><span class="nav-icon">🎟</span><span>Data Tiket Member</span></button>
+<button class="nav-item" data-page="games" type="button"><span class="nav-icon">🎮</span><span>Game Management</span></button>
+<button class="nav-item" data-page="themes" type="button"><span class="nav-icon">🎨</span><span>Theme Management</span></button>
+<button class="nav-item" data-page="prizes" type="button"><span class="nav-icon">🎁</span><span>Prize &amp; Bonus</span></button>
+<div class="nav-label">Integration &amp; Report</div>
+<button class="nav-item" data-page="integration" type="button"><span class="nav-icon">🔗</span><span>Spreadsheet Integration</span></button>
+<button class="nav-item" data-page="activity" type="button"><span class="nav-icon">◴</span><span>Activity History</span></button>
+<button class="nav-item" data-page="winners" type="button"><span class="nav-icon">🏆</span><span>Winner History</span></button>
+<button class="nav-item" data-page="audit" type="button"><span class="nav-icon">☷</span><span>Audit Log</span></button>
+<div class="nav-label">Administration</div>
+<button class="nav-item" data-page="admins" type="button"><span class="nav-icon">🛡</span><span>Admin Management</span></button>
+<button class="nav-item" data-page="permissions" type="button"><span class="nav-icon">🔐</span><span>Permission Management</span></button>
+<button class="nav-item" data-page="security" type="button"><span class="nav-icon">🔒</span><span>Security Settings</span></button>
+<button class="nav-item" data-page="settings" type="button"><span class="nav-icon">⚙</span><span>System Settings</span></button>
+<div class="sidebar-footer">
+<div class="admin-mini">
+<div class="avatar" id="sideAdminAvatar">ZA</div>
+<div><b id="sideAdminName">Zara Manis</b><div class="muted small" id="sideAdminRole">Super Admin</div></div>
+</div>
+<button class="btn secondary full" id="logoutBtn" style="margin-top:12px;padding:9px" type="button">Logout</button>
+</div>
+</aside>
+<main class="main">
+<header class="topbar">
+<div class="topbar-left">
+<button class="icon-btn mobile-menu" id="mobileMenu" type="button">☰</button>
+<div class="global-search">
+<span class="search-mark">⌕</span>
+<input class="input" id="globalSearch" placeholder="Cari member, game, aktivitas..." type="text"/>
+</div>
+</div>
+<div class="topbar-right">
+<button class="btn secondary hide-mobile" id="quickAddBtn" type="button">+ Tambah Cepat</button>
+<button class="icon-btn" id="refreshBtn" title="Refresh" type="button">↻</button>
+<button class="icon-btn" style="position:relative" title="Notifikasi" type="button">🔔<span class="notification-dot"></span></button>
+<div class="admin-mini">
+<div class="avatar" id="topAdminAvatar">ZA</div>
+<div class="hide-mobile"><b id="topAdminName">Zara Manis</b><div class="muted small" id="topAdminRole">Super Admin</div></div>
+</div>
+</div>
+</header>
+<div class="content">
+<section class="page active" id="page-dashboard">
+<div class="page-head">
+<div><h1>Dashboard Overview</h1><p>Ringkasan performa minigame dan aktivitas member.<span class="dashboard-filter-label" id="dashboardFilterLabel">7 hari terakhir</span></p></div>
+<div class="page-actions dashboard-filter">
+<select aria-label="Filter periode dashboard" class="select" id="dashboardRange">
+<option value="7d">7 Hari</option>
+<option value="30d">30 Hari</option>
+<option value="month">Bulan Ini</option>
+<option value="date">Pilih Tanggal</option>
+</select>
+<div class="dashboard-date-picker hidden" id="dashboardDatePicker">
+<input aria-label="Tanggal dashboard" class="date-input dashboard-date" id="dashboardDate" type="date"/>
+<button class="btn secondary" id="applyDashboardDate" type="button">Cari Tanggal</button>
+</div>
+<button class="btn" data-go="members" type="button">+ Berikan Tiket</button>
+</div>
+</div>
+<div class="grid stats-grid" id="statsGrid"></div>
+<div class="grid dashboard-grid">
+<div class="card glass">
+<div class="card-head"><h3>Aktivitas Pemain &amp; Penggunaan Tiket</h3><div class="toolbar"><span class="status active">Live Data</span></div></div>
+<div class="chart-wrap"><canvas id="activityChart"></canvas></div>
+</div>
+<div class="card glass">
+<div class="card-head"><h3>Aktivitas Terbaru</h3><button class="mini-btn" data-go="activity" type="button">Lihat Semua</button></div>
+<div class="activity-list" id="recentActivity"></div>
+</div>
+</div>
+<div class="grid two-col" style="margin-top:18px">
+<div class="card glass">
+<div class="card-head"><h3>Performa Game</h3><button class="mini-btn" data-go="games" type="button">Kelola Game</button></div>
+<div id="gamePerformance"></div>
+</div>
+<div class="card glass">
+<div class="card-head"><h3>Ringkasan Campaign</h3></div>
+<div class="kpi-strip" id="campaignSummary"></div>
+</div>
+</div>
+</section>
+<section class="page" id="page-members">
+<div class="page-head">
+<div><h1>Member Management</h1><p>Berikan akses dan tiket bermain kepada member.</p></div>
+<div class="page-actions"><button class="btn secondary" id="importDemoBtn" type="button">Import CSV</button></div>
+</div>
+<div class="grid two-col">
+<div class="card glass">
+<div class="card-head"><h3>Create Member Access</h3><span class="status active">Ready</span></div>
+<form class="form-grid" id="memberForm">
+<div class="field"><label>User ID Member</label><input class="input" id="memberUserId" placeholder="Contoh: USR004" required="" type="text"/></div>
+<div class="field"><label>Pilih Minigame</label><select class="select" id="memberGame" required=""></select></div>
+<div class="reward-panel" id="memberRewardPanel">
+<div class="reward-panel-head">
+<div><b>Fitur / Benefit Sesuai Minigame</b><span class="muted small" id="memberRewardGameLabel">Pilih minigame untuk menampilkan jenis benefit.</span></div>
+<button class="mini-btn" id="manageRewardTypesBtn" type="button">⚙ Kelola Jenis Benefit</button>
+</div>
+<div class="reward-grid">
+<div class="field" style="margin:0"><label>Jenis Benefit / Hadiah</label><select class="select" id="memberRewardType"></select></div>
+<div class="field" style="margin:0"><label>Mode Nominal Tiket</label><select class="select" id="memberRewardMode"><option value="random">Random per tiket</option><option value="manual">Nominal sama/manual</option></select></div>
+<div class="field wide" style="margin:0"><label id="memberRewardValueLabel">Nilai / Detail Benefit</label><input class="input" id="memberRewardValue" placeholder="Masukkan nilai benefit" type="text"/></div>
+</div>
+<div class="reward-hint" id="memberRewardHint">Jenis benefit dapat berbeda untuk setiap minigame dan bisa ditambah atau diedit sendiri.</div>
+<div class="ticket-bonus-preview empty-preview" id="memberRandomPreview">Atur daftar nominal random pada menu Prize &amp; Bonus Management.</div>
+</div>
+<div class="field"><label>Jumlah Tiket</label><input class="input" id="memberTickets" min="1" required="" type="number" value="1"/></div>
+<div class="field"><label>Tanggal Aktif</label><input class="input" id="memberActive" required="" type="date"/></div>
+<div class="field"><label>Tanggal Expired</label><input class="input" id="memberExpired" required="" type="date"/></div>
+<div class="field"><label>Status Akses</label><select class="select" id="memberStatus"><option value="active">Aktif</option><option value="disabled">Dinonaktifkan</option></select></div>
+<div class="field full-row"><label>Catatan Admin</label><textarea class="input" id="memberNotes" placeholder="Contoh: Bonus event khusus member aktif"></textarea></div>
+<div class="form-actions"><button class="btn secondary" type="reset">Reset</button><button class="btn" type="submit">CREATE MEMBER</button></div>
+</form>
+</div>
+<div class="card glass">
+<div class="card-head"><h3>Bulk Create</h3><span class="muted small">Format: USER_ID,JUMLAH_TIKET</span></div>
+<div class="field"><label>Daftar Member</label><textarea class="input" id="bulkMembers" placeholder="USR010,5
+USR011,3
+USR012,10" style="min-height:210px"></textarea></div>
+<div class="field"><label>Game Tujuan</label><select class="select" id="bulkGame"></select></div>
+<div class="field"><label>Jenis Benefit Random</label><select class="select" id="bulkRewardType"></select></div>
+<button class="btn full" id="bulkCreateBtn" type="button">PREVIEW &amp; IMPORT</button>
+<div class="notice" style="margin-top:16px">Sistem akan menggabungkan tiket apabila User ID sudah terdaftar pada game yang sama.</div>
+</div>
+</div>
+<div class="card glass table-card" style="margin-top:18px">
+<div class="table-toolbar"><div><b>Member Terbaru</b><div class="muted small">Data member yang baru diberikan akses.</div></div><button class="mini-btn" data-go="tickets" type="button">Lihat Semua Tiket</button></div>
+<div id="memberRecentTable"></div>
+</div>
+</section>
+<section class="page" id="page-tickets">
+<div class="page-head">
+<div><h1>Data Tiket Member</h1><p>Monitoring total tiket, penggunaan, sisa, dan status otomatis.</p></div>
+<div class="page-actions"><button class="btn secondary" id="exportTicketsBtn" type="button">Export CSV</button><button class="btn" data-go="members" type="button">+ Tambah Tiket</button></div>
+</div>
+<div class="card glass table-card">
+<div class="table-toolbar">
+<div class="toolbar">
+<input class="input" id="ticketSearch" placeholder="Cari User ID" style="width:220px" type="text"/>
+<select class="select" id="ticketGameFilter"><option value="">Semua Game</option></select>
+<select class="select" id="ticketStatusFilter"><option value="">Semua Status</option><option value="active">Aktif</option><option value="done">Sudah Main</option><option value="expired">Expired</option><option value="disabled">Dinonaktifkan</option></select>
+</div>
+<button class="mini-btn" id="resetTicketFilter" type="button">Reset Filter</button>
+</div>
+<div id="ticketsTable"></div>
+</div>
+</section>
+<section class="page" id="page-games">
+<div class="page-head">
+<div><h1>Game Management</h1><p>Buat dan kelola banyak minigame tanpa coding ulang.</p></div>
+<div class="page-actions"><button class="btn" id="newGameFocus" type="button">+ Tambah Game Baru</button></div>
+</div>
+<div class="grid two-col">
+<div class="card glass">
+<div class="card-head"><h3>Game Configuration</h3><span class="status active">Multi Event</span></div>
+<form class="form-grid" id="gameForm">
+<input id="editingGameId" type="hidden"/>
+<div class="field"><label>Nama Game</label><input class="input" id="gameName" placeholder="Balap Juara Kemerdekaan 2026" required="" type="text"/></div>
+<div class="field"><label>Game Code</label><input class="input" id="gameCode" placeholder="BALAP-2026" required="" type="text"/></div>
+<div class="field full-row"><label>Game URL</label><input class="input" id="gameUrl" placeholder="preview/game.html?code=GAME-CODE" required="" type="text"/></div>
+<div class="field full-row"><label>Google Spreadsheet Webhook</label><input class="input" id="gameWebhook" placeholder="https://script.google.com/macros/s/.../exec" type="url"/></div>
+<div class="field"><label>Tanggal Mulai</label><input class="input" id="gameStart" type="date"/></div>
+<div class="field"><label>Tanggal Selesai</label><input class="input" id="gameEnd" type="date"/></div>
+<div class="field"><label>Status</label><select class="select" id="gameStatus"><option value="active">Active</option><option value="scheduled">Scheduled</option><option value="draft">Draft</option><option value="maintenance">Maintenance</option><option value="finished">Finished</option><option value="disabled">Disabled</option></select></div>
+<div class="field"><label>Batas Bermain/Hari</label><input class="input" id="gameDailyLimit" min="0" type="number" value="0"/></div>
+<div class="form-actions"><button class="btn secondary" id="resetGameForm" type="button">Reset</button><button class="btn" type="submit">SAVE GAME</button></div>
+</form>
+</div>
+<div class="card glass">
+<div class="card-head"><h3>Game Readiness</h3></div>
+<div class="kpi-strip">
+<div><span class="muted small">URL Valid</span><b id="readyUrl">0</b></div>
+<div><span class="muted small">Webhook</span><b id="readyWebhook">0</b></div>
+<div><span class="muted small">Active</span><b id="readyActive">0</b></div>
+<div><span class="muted small">Total</span><b id="readyTotal">0</b></div>
+</div>
+<div class="notice" style="margin-top:18px">Klik <b>Preview</b> pada game untuk membuka URL game di tab baru. Mode ini tidak mengurangi tiket.</div>
+</div>
+</div>
+<div class="grid game-grid" id="gamesGrid" style="margin-top:18px"></div>
+</section>
+<section class="page" id="page-themes">
+<div class="page-head"><div><h1>Theme Management</h1><p>Ubah tampilan platform dan game tanpa coding.</p></div></div>
+<div class="grid two-col">
+<div class="card glass">
+<div class="card-head"><h3>Theme Editor</h3><span class="status active">Live Preview</span></div>
+<form class="form-grid" id="themeForm">
+<div class="field"><label>Theme Name</label><input class="input" id="themeName" type="text" value="Enterprise Purple"/></div>
+<div class="field"><label>Logo URL</label><input class="input" id="themeLogo" placeholder="https://.../logo.webp" type="text"/></div>
+<div class="field"><label>Dashboard Background</label>
+<select class="select" id="themeBackgroundType">
+<option value="default">Gradient Default</option>
+<option value="image">Gambar dari URL</option>
+<option value="video-url">Video dari URL</option>
+<option value="video-upload">Upload Video MP4/WebM</option>
+</select>
+</div>
+<div class="field" id="themeBackgroundUrlField"><label id="themeBackgroundUrlLabel">Background URL</label><input class="input" id="themeBackground" placeholder="https://.../background.webp" type="text"/></div>
+<div class="field full-row hidden" id="themeVideoUploadField">
+<label>Upload Video Animasi Dashboard</label>
+<div class="video-upload-box">
+<input accept="video/mp4,video/webm,video/ogg,.mp4,.webm,.ogg" id="themeVideoFile" type="file"/>
+<div class="theme-media-status"><span class="muted small" id="themeVideoStatus">Belum ada video yang dipilih.</span><button class="mini-btn" id="removeThemeVideoBtn" type="button">Hapus Video</button></div>
+<span class="muted small">Rekomendasi: MP4/WebM, resolusi 1920×1080, durasi 5–20 detik, ukuran maksimal 80 MB. Video otomatis mute dan loop.</span>
+</div>
+</div>
+<div class="field"><label>Primary Color</label><div class="color-row"><input class="input" id="primaryText" type="text" value="#7c5cff"/><input id="primaryColor" type="color" value="#7c5cff"/></div></div>
+<div class="field"><label>Accent Color</label><div class="color-row"><input class="input" id="accentText" type="text" value="#4ea7ff"/><input id="accentColor" type="color" value="#4ea7ff"/></div></div>
+<div class="field"><label>Card Radius</label><input class="input" id="themeRadius" max="30" min="10" type="range" value="20"/></div>
+<div class="field"><label>Glass Opacity</label><input class="input" id="themeOpacity" max="98" min="55" type="range" value="88"/></div>
+<div class="field"><label>Dark Overlay <span class="muted" id="themeOverlayValue">68%</span></label><input class="input" id="themeOverlay" max="92" min="15" type="range" value="68"/></div>
+<div class="field"><label>Video Blur <span class="muted" id="themeVideoBlurValue">0px</span></label><input class="input" id="themeVideoBlur" max="12" min="0" type="range" value="0"/></div>
+<div class="field"><label>Video Speed</label><select class="select" id="themeVideoSpeed"><option value="0.5">0.5×</option><option value="0.75">0.75×</option><option selected="" value="1">1× Normal</option><option value="1.25">1.25×</option><option value="1.5">1.5×</option></select></div>
+<div class="field"><label>Video Opacity <span class="muted" id="themeVideoOpacityValue">100%</span></label><input class="input" id="themeVideoOpacity" max="100" min="30" type="range" value="100"/></div>
+<div class="form-actions"><button class="btn secondary" id="resetThemeBtn" type="button">Default</button><button class="btn" type="submit">SAVE THEME</button></div>
+</form>
+</div>
+<div class="card glass">
+<div class="card-head"><h3>Preview</h3></div>
+<div class="theme-preview" id="themePreview">
+<img alt="" id="themePreviewImage" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="/>
+<video autoplay="" id="themePreviewVideo" loop="" muted="" playsinline="" preload="metadata"></video>
+<div class="preview-media-overlay" id="themePreviewOverlay"></div>
+<div class="preview-panel">
+<span class="status active">Campaign Active</span>
+<h2 style="margin:15px 0 7px">Balap Juara 2026</h2>
+<p class="muted">Gunakan tiket untuk bermain dan raih hadiah event.</p>
+<button class="btn" type="button">Main Sekarang</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="page" id="page-prizes">
+<div class="page-head"><div><h1>Prize &amp; Bonus Management</h1><p>Kelola hadiah dan atur nominal bonus random untuk setiap tiket.</p></div></div>
+<div class="card glass" style="margin-bottom:18px">
+<div class="card-head"><div><h3>Setting Nominal Bonus Random</h3><div class="muted small">Setiap tiket akan mengambil satu nominal secara acak dari daftar yang aktif.</div></div><span class="status active">Per Tiket</span></div>
+<form class="form-grid" id="randomBonusForm">
+<div class="field"><label>Game</label><select class="select" id="bonusSettingGame"></select></div>
+<div class="field"><label>Jenis Benefit</label><select class="select" id="bonusSettingRewardType"></select></div>
+<div class="field full-row"><label>Daftar Nominal / Isi Bonus</label><textarea class="input" id="bonusNominalValues" placeholder="Masukkan satu nominal per baris, contoh:
+10000
+5000
+1000"></textarea></div>
+<div class="form-actions"><button class="btn secondary" id="clearBonusNominalBtn" type="button">HAPUS SETTING</button><button class="btn" type="submit">SAVE NOMINAL RANDOM</button></div>
+</form>
+<div class="ticket-bonus-preview empty-preview" id="bonusNominalPreview">Pilih game dan jenis benefit untuk mengatur daftar nominal.</div>
+</div>
+<div class="grid two-col">
+<div class="card glass">
+<div class="card-head"><h3>Tambah Hadiah</h3></div>
+<form class="form-grid" id="prizeForm">
+<div class="field"><label>Nama Hadiah</label><input class="input" id="prizeName" placeholder="Saldo Rp10.000" required="" type="text"/></div>
+<div class="field"><label>Game</label><select class="select" id="prizeGame"></select></div>
+<div class="field"><label>Jenis</label><select class="select" id="prizeType"><option>Saldo</option><option>Bonus Tiket</option><option>Kupon</option><option>Poin</option><option>Tidak Menang</option></select></div>
+<div class="field"><label>Nilai</label><input class="input" id="prizeValue" placeholder="10000" type="text"/></div>
+<div class="field"><label>Kuota</label><input class="input" id="prizeQuota" min="0" type="number" value="100"/></div>
+<div class="field"><label>Probabilitas (%)</label><input class="input" id="prizeProbability" max="100" min="0" step=".01" type="number" value="10"/></div>
+<div class="form-actions"><button class="btn secondary" type="reset">Reset</button><button class="btn" type="submit">SAVE PRIZE</button></div>
+</form>
+</div>
+<div class="card glass">
+<div class="card-head"><h3>Prize Health</h3></div>
+<div class="kpi-strip" id="prizeHealth"></div>
+<div class="notice" style="margin-top:18px">Konfigurasi hadiah tersimpan langsung dan dapat diuji melalui simulasi tiket pada dashboard.</div>
+</div>
+</div>
+<div class="card glass table-card" style="margin-top:18px"><div id="prizesTable"></div></div>
+</section>
+<section class="page" id="page-integration">
+<div class="page-head"><div><h1>Spreadsheet Integration</h1><p>Hubungkan hasil permainan ke Google Apps Script Webhook.</p></div></div>
+<div class="grid two-col">
+<div class="card glass">
+<div class="card-head"><h3>Connection Settings</h3><span class="status draft" id="integrationStatus">Not Tested</span></div>
+<form class="form-grid" id="integrationForm">
+<div class="field full-row"><label>Webhook URL</label><input class="input" id="integrationWebhook" placeholder="https://script.google.com/macros/s/.../exec" type="url"/></div>
+<div class="field"><label>Sheet Name</label><input class="input" id="integrationSheet" type="text" value="ACTIVITIES"/></div>
+<div class="field"><label>Secret Key</label><input autocomplete="new-password" class="input" id="integrationSecret" placeholder="Masukkan secret key endpoint" type="password"/></div>
+<div class="field"><label>Game</label><select class="select" id="integrationGame"></select></div>
+<div class="field"><label>Retry</label><select class="select" id="integrationRetry"><option value="3">3 kali</option><option value="5">5 kali</option><option value="0">Nonaktif</option></select></div>
+<div class="form-actions"><button class="btn secondary" id="testIntegrationBtn" type="button">TEST CONNECTION</button><button class="btn" type="submit">SAVE CONNECTION</button></div>
+</form>
+</div>
+<div class="card glass">
+<div class="card-head"><h3>Payload Preview</h3></div>
+<pre id="payloadPreview" style="white-space:pre-wrap;background:#080d18;border:1px solid var(--line);padding:16px;border-radius:14px;color:#aee8c9;min-height:270px;overflow:auto"></pre>
+</div>
+</div>
+</section>
+<section class="page" id="page-activity">
+<div class="page-head"><div><h1>Activity History</h1><p>Riwayat lengkap aktivitas member dan sistem.</p></div><div class="page-actions"><button class="btn secondary" id="exportActivityBtn" type="button">Export CSV</button></div></div>
+<div class="card glass table-card"><div id="activityTable"></div></div>
+</section>
+<section class="page" id="page-winners">
+<div class="page-head"><div><h1>Winner History</h1><p>Kelola pemenang dan status penyerahan hadiah.</p></div><div class="page-actions"><button class="btn secondary" id="exportWinnersBtn" type="button">Export CSV</button></div></div>
+<div class="card glass table-card"><div id="winnersTable"></div></div>
+</section>
+<section class="page" id="page-audit">
+<div class="page-head"><div><h1>Audit Log</h1><p>Semua perubahan penting oleh admin tercatat otomatis.</p></div></div>
+<div class="card glass table-card"><div id="auditTable"></div></div>
+</section>
+<section class="page" id="page-admins">
+<div class="page-head"><div><h1>Admin Management</h1><p>Kelola admin dan hak akses berbasis role.</p></div></div>
+<div class="grid two-col">
+<div class="card glass">
+<div class="card-head"><h3>Tambah Admin</h3></div>
+<form class="form-grid" id="adminForm">
+<div class="field"><label>Nama</label><input class="input" id="adminName" required="" type="text"/></div>
+<div class="field"><label>Email</label><input class="input" id="adminEmail" required="" type="email"/></div>
+<div class="field"><label>Role</label><select class="select" id="adminRole"><option>Admin Kedua</option><option>Staff</option><option>Super Admin</option></select></div>
+<div class="field"><label>Status</label><select class="select" id="adminStatus"><option value="active">Active</option><option value="disabled">Disabled</option></select></div>
+<div class="field full-row"><label>Password Sementara</label><input autocomplete="new-password" class="input" id="adminTempPassword" minlength="8" required="" type="password"/></div>
+<div class="form-actions"><button class="btn secondary" type="reset">Reset</button><button class="btn" type="submit">CREATE ADMIN</button></div>
+</form>
+</div>
+<div class="card glass">
+<div class="card-head"><h3>Role Summary</h3></div>
+<div class="activity-list">
+<div class="activity-item"><div class="activity-badge">SA</div><div><b>Super Admin</b><span>Akses penuh seluruh sistem.</span></div><span>Full</span></div>
+<div class="activity-item"><div class="activity-badge">AK</div><div><b>Admin Kedua</b><span>Akses mengikuti permission dari Super Admin.</span></div><span>Custom</span></div>
+<div class="activity-item"><div class="activity-badge">ST</div><div><b>Staff</b><span>Akses terbatas untuk pekerjaan operasional.</span></div><span>Limited</span></div>
+</div>
+</div>
+</div>
+<div class="card glass table-card" style="margin-top:18px"><div id="adminsTable"></div></div>
+</section>
+<section class="page" id="page-permissions">
+<div class="page-head">
+<div><h1>Permission Management</h1><p>Super Admin mengatur akses menu, tindakan, dan konfigurasi setiap fitur.</p></div>
+<div class="page-actions">
+<button class="btn secondary" id="presetAdminBtn" type="button">Preset Admin Kedua</button>
+<button class="btn secondary" id="presetStaffBtn" type="button">Preset Staff</button>
+<button class="btn" id="savePermissionsBtn" type="button">SAVE PERMISSIONS</button>
+</div>
+</div>
+<div class="permission-summary" id="permissionSummary"></div>
+<div class="card glass table-card" style="margin-top:18px">
+<div class="table-toolbar">
+<div><b>Matriks Hak Akses Berdasarkan Role</b><div class="muted small">Atur izin lihat, tambah, ubah, hapus, dan akses setting untuk Admin Kedua dan Staff.</div></div>
+<span class="status active">Super Admin Selalu Full Access</span>
+</div>
+<div class="table-wrap" id="permissionMatrixTable"></div>
+</div>
+<div class="card glass" style="margin-top:18px">
+<div class="card-head"><div><h3>Menu Setting Setiap Fitur</h3><div class="muted small">Aktif/nonaktifkan fitur, ubah nama menu, tentukan aturan, limit, konfirmasi, dan audit log.</div></div></div>
+<div class="feature-setting-grid" id="featureSettingsGrid"></div>
+</div>
+<div class="permission-note" style="margin-top:18px">Permission role menjadi aturan dasar. Pada Admin Management, Super Admin juga dapat membuka tombol <b>Atur Akses</b> untuk memberikan izin khusus kepada satu admin atau staff tanpa mengubah role lain.</div>
+</section>
+<section class="page" id="page-security">
+<div class="page-head"><div><h1>Security Settings</h1><p>Kelola password, session, dan riwayat login.</p></div></div>
+<div class="grid two-col">
+<div class="card glass">
+<div class="card-head"><h3>Ganti Password</h3></div>
+<form class="form-grid" id="passwordForm">
+<div class="field full-row"><label>Password Saat Ini</label><input autocomplete="new-password" class="input" id="currentPassword" required="" type="password"/></div>
+<div class="field"><label>Password Baru</label><input autocomplete="new-password" class="input" id="newPassword" minlength="10" required="" type="password"/></div>
+<div class="field"><label>Konfirmasi Password</label><input autocomplete="new-password" class="input" id="confirmPassword" minlength="10" required="" type="password"/></div>
+<div class="form-actions"><button class="btn" type="submit">UPDATE PASSWORD</button></div>
+</form>
+<div class="notice">Pada versi produksi, password harus di-hash di backend dan tidak pernah disimpan di localStorage.</div>
+</div>
+<div class="card glass">
+<div class="card-head"><h3>Session Control</h3></div>
+<div class="kpi-strip"><div><span class="muted small">Active Session</span><b>1</b></div><div><span class="muted small">Failed Login</span><b id="failedLoginCount">0</b></div><div><span class="muted small">2FA</span><b>Off</b></div><div><span class="muted small">Role</span><b id="securityRoleCode">SA</b></div></div>
+<button class="btn danger full" id="logoutAllBtn" style="margin-top:18px" type="button">LOGOUT SEMUA PERANGKAT</button>
+</div>
+</div>
+<div class="card glass" style="margin-top:18px"><div class="card-head"><h3>Riwayat Login</h3></div><div class="login-log" id="loginHistory"></div></div>
+</section>
+<section class="page" id="page-settings">
+<div class="page-head"><div><h1>System Settings</h1><p>Konfigurasi umum platform.</p></div></div>
+<div class="card glass">
+<form class="form-grid" id="settingsForm">
+<div class="field"><label>Nama Platform</label><input class="input" id="settingPlatform" type="text" value="Minigame Enterprise 2026"/></div>
+<div class="field"><label>Timezone</label><select class="select" id="settingTimezone"><option>Asia/Jakarta</option><option>Asia/Phnom_Penh</option><option>UTC</option></select></div>
+<div class="field"><label>Default Pagination</label><select class="select" id="settingPagination"><option>10</option><option>20</option><option>50</option></select></div>
+<div class="field"><label>Session Timeout</label><select class="select" id="settingSession"><option>30 Menit</option><option>1 Jam</option><option>8 Jam</option></select></div>
+<div class="field"><label>Mata Uang</label><select class="select" id="settingCurrency"><option>IDR</option><option>USD</option></select></div>
+<div class="field"><label>Maintenance Mode</label><select class="select" id="settingMaintenance"><option value="off">Off</option><option value="on">On</option></select></div>
+<div class="form-actions"><button class="btn" type="submit">SAVE SETTINGS</button></div>
+</form>
+</div>
+</section>
+<div class="footer-note">MINIGAME ADMIN ENTERPRISE 2026 · SINGLE-FILE BUILD · DATA TERSIMPAN LOKAL DI BROWSER</div>
+</div>
+</main>
+</div>
+<div class="modal-backdrop" id="modalBackdrop">
+<div class="modal glass">
+<div class="modal-head"><h3 id="modalTitle">Detail</h3><button class="icon-btn" id="modalClose" type="button">✕</button></div>
+<div id="modalBody"></div>
+</div>
+</div>
+<div class="toast-area" id="toastArea"></div>
+<script>
+(()=>{"use strict";
+const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const esc=v=>String(v??"").replace(/[&<>'"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;",'"':"&quot;"}[c]));
+const uid=(p="ID")=>`${p}-${Date.now().toString(36).toUpperCase()}-${Math.random().toString(36).slice(2,6).toUpperCase()}`;
+const isoDate=(d=new Date())=>{const x=new Date(d);x.setMinutes(x.getMinutes()-x.getTimezoneOffset());return x.toISOString().slice(0,10)};
+const isoTime=(d=new Date())=>{const x=new Date(d);x.setMinutes(x.getMinutes()-x.getTimezoneOffset());return x.toISOString().slice(0,16).replace("T"," ")};
+const addDays=(n,base=new Date())=>{const d=new Date(base);d.setDate(d.getDate()+n);return isoDate(d)};
+const money=n=>new Intl.NumberFormat("id-ID",{style:"currency",currency:"IDR",maximumFractionDigits:0}).format(Number(n)||0);
+const num=n=>new Intl.NumberFormat("id-ID").format(Number(n)||0);
+const clone=o=>JSON.parse(JSON.stringify(o));
+const STORAGE_KEY="minigame_enterprise_single_v3";
+let memoryStore=null;
+const storage={get(){try{return JSON.parse(localStorage.getItem(STORAGE_KEY)||"null")}catch{return memoryStore}},set(v){memoryStore=v;try{localStorage.setItem(STORAGE_KEY,JSON.stringify(v))}catch(e){toast("Penyimpanan browser penuh. Data sesi tetap aktif, tetapi video besar tidak disimpan di localStorage.","error")}}};
+const featureDefs=[
+ {id:"dashboard",label:"Dashboard",icon:"⌂"},{id:"members",label:"Member Management",icon:"👥"},{id:"tickets",label:"Data Tiket Member",icon:"🎟"},{id:"games",label:"Game Management",icon:"🎮"},{id:"themes",label:"Theme Management",icon:"🎨"},{id:"prizes",label:"Prize & Bonus",icon:"🎁"},{id:"integration",label:"Spreadsheet Integration",icon:"🔗"},{id:"activity",label:"Activity History",icon:"◴"},{id:"winners",label:"Winner History",icon:"🏆"},{id:"audit",label:"Audit Log",icon:"☷"},{id:"admins",label:"Admin Management",icon:"🛡"},{id:"permissions",label:"Permission Management",icon:"🔐"},{id:"security",label:"Security Settings",icon:"🔒"},{id:"settings",label:"System Settings",icon:"⚙"}
+];
+const actions=["view","create","edit","delete","settings"];
+const roleKey=role=>role==="Admin Kedua"?"admin2":role==="Staff"?"staff":"super";
+const makePermission=(allowed=true)=>Object.fromEntries(featureDefs.map(f=>[f.id,Object.fromEntries(actions.map(a=>[a,allowed]))]));
+const makeDefaultState=()=>{
+ const today=isoDate();
+ const superP=makePermission(true), adminP=makePermission(false), staffP=makePermission(false);
+ ["dashboard","members","tickets","games","themes","prizes","integration","activity","winners","security"].forEach(id=>actions.forEach(a=>adminP[id][a]=a!=="delete"));
+ ["dashboard","members","tickets","activity","winners","security"].forEach(id=>{staffP[id].view=true;staffP[id].create=["members","tickets"].includes(id);staffP[id].edit=["members","tickets","winners"].includes(id)});
+ const games=[
+  {id:"GAME-001",name:"Balap Kelereng Merdeka",code:"MARBLE-2026",url:"builtin://marble",webhook:"",start:addDays(-7),end:addDays(30),status:"active",dailyLimit:1,rewardTypes:["Saldo","Kupon","Freechip"],plays:1248},
+  {id:"GAME-002",name:"Makan Kerupuk Challenge",code:"KERUPUK-2026",url:"builtin://race",webhook:"",start:addDays(-2),end:addDays(20),status:"active",dailyLimit:2,rewardTypes:["Saldo","Bonus Tiket","Poin"],plays:896},
+  {id:"GAME-003",name:"Panjat Pinang Arena",code:"PINANG-2026",url:"builtin://climb",webhook:"",start:addDays(5),end:addDays(35),status:"scheduled",dailyLimit:1,rewardTypes:["Saldo","Voucher","Hadiah Fisik"],plays:0}
+ ];
+ const admins=[
+  {id:"ADM-001",name:"Zara Manis",email:"zaramanis1233@gmail.com",password:"Click8899@",role:"Super Admin",status:"active",lastLogin:isoTime(),customPermissions:null},
+  {id:"ADM-002",name:"Admin Kedua",email:"admin2@minigame.local",password:"Admin123!",role:"Admin Kedua",status:"active",lastLogin:addDays(-1)+" 21:12",customPermissions:null},
+  {id:"ADM-003",name:"Staff Operasional",email:"staff@minigame.local",password:"Staff123!",role:"Staff",status:"active",lastLogin:addDays(-1)+" 18:05",customPermissions:null}
+ ];
+ const tickets=[
+  {id:"TKT-1001",userId:"USR001",gameId:"GAME-001",rewardType:"Saldo",rewardMode:"random",rewardValue:"10000",total:3,used:1,active:addDays(-3),expired:addDays(12),status:"active",notes:"Member VIP",created:isoTime(new Date(Date.now()-86400000*3))},
+  {id:"TKT-1002",userId:"USR002",gameId:"GAME-002",rewardType:"Bonus Tiket",rewardMode:"manual",rewardValue:"2 Tiket",total:2,used:2,active:addDays(-5),expired:addDays(5),status:"done",notes:"Campaign reguler",created:isoTime(new Date(Date.now()-86400000*5))},
+  {id:"TKT-1003",userId:"USR003",gameId:"GAME-001",rewardType:"Kupon",rewardMode:"random",rewardValue:"5000",total:5,used:0,active:today,expired:addDays(14),status:"active",notes:"",created:isoTime()}
+ ];
+ const prizes=[
+  {id:"PRZ-001",name:"Saldo Rp10.000",gameId:"GAME-001",type:"Saldo",value:"10000",quota:100,claimed:18,probability:25},
+  {id:"PRZ-002",name:"Saldo Rp5.000",gameId:"GAME-001",type:"Saldo",value:"5000",quota:200,claimed:34,probability:35},
+  {id:"PRZ-003",name:"Bonus 2 Tiket",gameId:"GAME-002",type:"Bonus Tiket",value:"2",quota:150,claimed:21,probability:30},
+  {id:"PRZ-004",name:"Belum Menang",gameId:"GAME-002",type:"Tidak Menang",value:"0",quota:9999,claimed:89,probability:70}
+ ];
+ const activity=Array.from({length:18},(_,i)=>({id:uid("ACT"),time:isoTime(new Date(Date.now()-i*1000*60*95)),userId:`USR${String((i%8)+1).padStart(3,"0")}`,gameId:games[i%3].id,type:["PLAY","TICKET_CREATED","LOGIN","PRIZE_CLAIM"][i%4],detail:["Memainkan minigame","Tiket diberikan admin","Login member berhasil","Hadiah diklaim"][i%4],amount:i%4===3?[5000,10000,0][i%3]:0}));
+ const winners=[
+  {id:"WIN-001",time:isoTime(new Date(Date.now()-3600000*4)),userId:"USR001",gameId:"GAME-001",prize:"Saldo Rp10.000",value:10000,status:"delivered"},
+  {id:"WIN-002",time:isoTime(new Date(Date.now()-3600000*19)),userId:"USR005",gameId:"GAME-002",prize:"Bonus 2 Tiket",value:2,status:"pending"},
+  {id:"WIN-003",time:isoTime(new Date(Date.now()-86400000*2)),userId:"USR008",gameId:"GAME-001",prize:"Saldo Rp5.000",value:5000,status:"delivered"}
+ ];
+ return {version:3,currentAdmin:null,failedLogins:0,admins,games,tickets,prizes,activity,winners,audit:[{id:uid("AUD"),time:isoTime(),admin:"System",action:"INITIALIZE",detail:"Database dummy standalone dibuat"}],loginHistory:[],permissions:{super:superP,admin2:adminP,staff:staffP},featureSettings:Object.fromEntries(featureDefs.map(f=>[f.id,{enabled:true,label:f.label,requireConfirm:f.id==="tickets",audit:true,limit:0}])),randomBonuses:{"GAME-001|Saldo":["10000","5000","1000"],"GAME-001|Kupon":["10000","5000"],"GAME-002|Bonus Tiket":["1","2","3"]},theme:{name:"Enterprise Purple",logo:"",backgroundType:"default",background:"",primary:"#7c5cff",accent:"#4ea7ff",radius:20,opacity:88,overlay:68,blur:0,speed:1,videoOpacity:100},integration:{webhook:"",sheet:"ACTIVITIES",secret:"",gameId:"GAME-001",retry:3,status:"untested"},settings:{platform:"Minigame Enterprise 2026",timezone:"Asia/Jakarta",pagination:10,session:"1 Jam",currency:"IDR",maintenance:"off"}};
+};
+let state=storage.get();
+if(!state||state.version!==3)state=makeDefaultState();
+const save=(auditAction,detail)=>{if(auditAction){state.audit.unshift({id:uid("AUD"),time:isoTime(),admin:currentAdmin()?.name||"System",action:auditAction,detail});state.audit=state.audit.slice(0,500)}storage.set(state)};
+const currentAdmin=()=>state.admins.find(a=>a.id===state.currentAdmin)||null;
+const gameById=id=>state.games.find(g=>g.id===id)||{name:"Game dihapus",code:"-"};
+const permissionFor=(feature,action="view")=>{const a=currentAdmin();if(!a)return false;if(a.role==="Super Admin")return true;const p=a.customPermissions||state.permissions[roleKey(a.role)];return !!p?.[feature]?.[action]};
+const toast=(message,type="success")=>{const area=$("#toastArea");if(!area)return;const el=document.createElement("div");el.className=`toast ${type}`;el.textContent=message;area.appendChild(el);setTimeout(()=>el.remove(),3800)};
+const openModal=(title,html,wide=false)=>{$("#modalTitle").textContent=title;$("#modalBody").innerHTML=html;$("#modalBackdrop").classList.add("open");$("#modalBackdrop .modal").classList.toggle("wide-modal",wide)};
+const closeModal=()=>$("#modalBackdrop").classList.remove("open");
+const statusBadge=s=>`<span class="status ${esc(s)}">${esc(({active:"Aktif",done:"Sudah Main",expired:"Expired",disabled:"Nonaktif",scheduled:"Terjadwal",draft:"Draft",maintenance:"Maintenance",finished:"Selesai",pending:"Menunggu",delivered:"Terkirim"}[s]||s))}</span>`;
+const table=(headers,rows,empty="Belum ada data")=>`<div class="table-wrap"><table class="data-table"><thead><tr>${headers.map(h=>`<th>${esc(h)}</th>`).join("")}</tr></thead><tbody>${rows.length?rows.join(""):`<tr><td colspan="${headers.length}"><div class="empty-state"><b>${esc(empty)}</b><span>Data akan muncul setelah aktivitas dibuat.</span></div></td></tr>`}</tbody></table></div>`;
+const download=(name,content,type="text/plain")=>{const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([content],{type}));a.download=name;document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},800)};
+const toCSV=(rows)=>{if(!rows.length)return "";const keys=Object.keys(rows[0]);const cell=v=>`"${String(v??"").replace(/"/g,'""')}"`;return [keys.map(cell).join(","),...rows.map(r=>keys.map(k=>cell(r[k])).join(","))].join("\n")};
+const setOptions=(el,items,valueKey="id",labelKey="name",includeAll="")=>{if(!el)return;const old=el.value;el.innerHTML=(includeAll?`<option value="">${esc(includeAll)}</option>`:"")+items.map(x=>`<option value="${esc(x[valueKey])}">${esc(x[labelKey])}</option>`).join("");if([...el.options].some(o=>o.value===old))el.value=old};
+function logActivity(type,detail,userId="SYSTEM",gameId="",amount=0){state.activity.unshift({id:uid("ACT"),time:isoTime(),userId,gameId,type,detail,amount});state.activity=state.activity.slice(0,700)}
+function initDates(){[$("#memberActive"),$("#gameStart")].forEach(e=>e&&(e.value=isoDate()));$("#memberExpired").value=addDays(14);$("#gameEnd").value=addDays(30);$("#dashboardDate").value=isoDate()}
+function populateGameSelects(){["memberGame","bulkGame","prizeGame","bonusSettingGame","integrationGame"].forEach(id=>setOptions($("#"+id),state.games));setOptions($("#ticketGameFilter"),state.games,"id","name","Semua Game")}
+function rewardTypesFor(gameId){return gameById(gameId).rewardTypes||["Saldo"]}
+function populateRewardTypes(){const gameId=$("#memberGame").value;const types=rewardTypesFor(gameId).map(x=>({id:x,name:x}));setOptions($("#memberRewardType"),types);setOptions($("#bulkRewardType"),rewardTypesFor($("#bulkGame").value).map(x=>({id:x,name:x})));setOptions($("#bonusSettingRewardType"),rewardTypesFor($("#bonusSettingGame").value).map(x=>({id:x,name:x})));updateRewardPanel();updateBonusEditor()}
+function updateRewardPanel(){const g=gameById($("#memberGame").value),type=$("#memberRewardType").value,mode=$("#memberRewardMode").value,key=`${g.id}|${type}`,vals=state.randomBonuses[key]||[];$("#memberRewardGameLabel").textContent=`${g.name||"Pilih game"} · ${type||"Benefit"}`;$("#memberRewardValueLabel").textContent=mode==="random"?"Nilai fallback (opsional)":"Nilai / Detail Benefit";$("#memberRewardValue").disabled=mode==="random"&&vals.length>0;$("#memberRandomPreview").className=`ticket-bonus-preview ${vals.length?"":"empty-preview"}`;$("#memberRandomPreview").innerHTML=vals.length?vals.map(v=>`<span class="pill">${/^\d+$/.test(v)?money(v):esc(v)}</span>`).join(""):"Belum ada daftar random. Atur di menu Prize & Bonus."}
+function applyFeatureSettings(){featureDefs.forEach(f=>{const setting=state.featureSettings[f.id];const nav=$(`.nav-item[data-page="${f.id}"]`);if(nav){nav.style.display=setting?.enabled&&permissionFor(f.id)?"":"none";const span=nav.querySelector("span:last-child");if(span)span.textContent=setting?.label||f.label}});const active=$(".nav-item.active");if(active&&active.style.display==="none")showPage("dashboard")}
+function showPage(id){if(!state.featureSettings[id]?.enabled||!permissionFor(id)){toast("Akses ke menu ini tidak diizinkan.","error");return}$$('.page').forEach(x=>x.classList.toggle("active",x.id===`page-${id}`));$$('.nav-item').forEach(x=>x.classList.toggle("active",x.dataset.page===id));$("#sidebar").classList.remove("open");window.scrollTo({top:0,behavior:"smooth"});renderPage(id)}
+function renderPage(id){({dashboard:renderDashboard,members:renderMembers,tickets:renderTickets,games:renderGames,themes:renderTheme,prizes:renderPrizes,integration:renderIntegration,activity:renderActivity,winners:renderWinners,audit:renderAudit,admins:renderAdmins,permissions:renderPermissions,security:renderSecurity,settings:renderSettings}[id]||(()=>{}))()}
+function renderAll(){populateGameSelects();populateRewardTypes();applyTheme();applyFeatureSettings();renderDashboard();renderMembers();renderTickets();renderGames();renderPrizes();renderIntegration();renderActivity();renderWinners();renderAudit();renderAdmins();renderPermissions();renderSecurity();renderSettings()}
+function login(admin,preview=false){state.currentAdmin=admin.id;admin.lastLogin=isoTime();state.loginHistory.unshift({id:uid("LOG"),time:isoTime(),email:admin.email,status:"success",device:navigator.userAgent.slice(0,80)});state.loginHistory=state.loginHistory.slice(0,100);save("LOGIN",`${admin.email} masuk${preview?" melalui preview":""}`);$("#loginScreen").classList.add("hidden");$("#app").classList.remove("hidden");const initials=admin.name.split(/\s+/).map(x=>x[0]).join("").slice(0,2).toUpperCase();["sideAdminAvatar","topAdminAvatar"].forEach(id=>$("#"+id).textContent=initials);["sideAdminName","topAdminName"].forEach(id=>$("#"+id).textContent=admin.name);["sideAdminRole","topAdminRole"].forEach(id=>$("#"+id).textContent=admin.role);renderAll();showPage("dashboard")}
+function logout(){save("LOGOUT",`${currentAdmin()?.email||"Admin"} logout`);state.currentAdmin=null;storage.set(state);$("#app").classList.add("hidden");$("#loginScreen").classList.remove("hidden");$("#loginPassword").value=""}
+function dateFilteredActivity(){const range=$("#dashboardRange").value,now=new Date(),selected=$("#dashboardDate").value;return state.activity.filter(a=>{const d=new Date(a.time.replace(" ","T"));if(range==="date")return a.time.slice(0,10)===selected;if(range==="month")return d.getMonth()===now.getMonth()&&d.getFullYear()===now.getFullYear();const days=range==="30d"?30:7;return d>=new Date(now-days*86400000)})}
+function renderDashboard(){const act=dateFilteredActivity(),plays=act.filter(x=>x.type==="PLAY").length,totalTickets=state.tickets.reduce((a,t)=>a+t.total,0),used=state.tickets.reduce((a,t)=>a+t.used,0),activeMembers=new Set(state.tickets.filter(t=>t.status==="active").map(t=>t.userId)).size,totalValue=state.winners.reduce((a,w)=>a+(Number(w.value)||0),0);const stats=[
+ ["👥",activeMembers,"Member Aktif","+12% dari periode lalu","rgba(124,92,255,.18)"],["🎟",totalTickets,"Tiket Dibuat",`${used} telah digunakan`,"rgba(78,167,255,.18)"],["🎮",plays,"Permainan",`${state.games.filter(g=>g.status==="active").length} game aktif`,"rgba(41,211,145,.16)"],["🏆",state.winners.length,"Pemenang",money(totalValue),"rgba(255,189,89,.18)"],["⚡",act.length,"Aktivitas",`Periode terpilih`,"rgba(255,98,125,.16)"],["📈",totalTickets?Math.round(used/totalTickets*100)+"%":"0%","Ticket Usage",`${totalTickets-used} tiket tersisa`,"rgba(174,123,255,.18)"]];
+ $("#statsGrid").innerHTML=stats.map(s=>`<div class="card glass stat-card" style="--tone:${s[4]}"><div class="stat-icon">${s[0]}</div><div class="stat-value">${esc(s[1])}</div><div class="stat-label">${s[2]}</div><div class="stat-delta">${s[3]}</div></div>`).join("");
+ const labels={"7d":"7 hari terakhir","30d":"30 hari terakhir",month:"bulan ini",date:$("#dashboardDate").value||"tanggal terpilih"};$("#dashboardFilterLabel").textContent=labels[$("#dashboardRange").value];
+ $("#recentActivity").innerHTML=act.slice(0,7).map(a=>`<div class="activity-item"><div class="activity-badge">${esc(a.type.slice(0,2))}</div><div><b>${esc(a.detail)}</b><span>${esc(a.userId)} · ${esc(gameById(a.gameId).name||"Sistem")}</span></div><span>${esc(a.time.slice(5))}</span></div>`).join("")||`<div class="empty-state">Tidak ada aktivitas pada periode ini.</div>`;
+ $("#gamePerformance").innerHTML=state.games.map(g=>{const max=Math.max(...state.games.map(x=>x.plays||0),1),pct=Math.round((g.plays||0)/max*100);return `<div class="performance-row"><b>${esc(g.name)}</b><span class="muted small">${num(g.plays||0)} play</span><div class="progress"><i style="width:${pct}%"></i></div></div>`}).join("");
+ $("#campaignSummary").innerHTML=`<div><span class="muted small">Active Game</span><b>${state.games.filter(g=>g.status==="active").length}</b></div><div><span class="muted small">Scheduled</span><b>${state.games.filter(g=>g.status==="scheduled").length}</b></div><div><span class="muted small">Total Prize</span><b>${state.prizes.length}</b></div><div><span class="muted small">Pending Claim</span><b>${state.winners.filter(w=>w.status==="pending").length}</b></div>`;
+ drawChart(act)
+}
+function drawChart(act){const canvas=$("#activityChart"),ctx=canvas.getContext("2d"),rect=canvas.getBoundingClientRect(),dpr=window.devicePixelRatio||1;canvas.width=Math.max(300,rect.width*dpr);canvas.height=Math.max(200,rect.height*dpr);ctx.scale(dpr,dpr);const w=rect.width,h=rect.height,p=35;ctx.clearRect(0,0,w,h);const days=Array.from({length:7},(_,i)=>addDays(i-6)),values=days.map(d=>act.filter(a=>a.time.startsWith(d)).length),max=Math.max(5,...values);ctx.strokeStyle="rgba(255,255,255,.08)";ctx.fillStyle="#8794ad";ctx.font="11px system-ui";for(let i=0;i<5;i++){const y=p+(h-p*2)*i/4;ctx.beginPath();ctx.moveTo(p,y);ctx.lineTo(w-p,y);ctx.stroke();ctx.fillText(String(Math.round(max*(1-i/4))),5,y+4)}const pts=values.map((v,i)=>[p+(w-p*2)*i/6,h-p-(h-p*2)*v/max]);const grad=ctx.createLinearGradient(0,p,0,h-p);grad.addColorStop(0,getComputedStyle(document.documentElement).getPropertyValue("--primary").trim()||"#7c5cff");grad.addColorStop(1,getComputedStyle(document.documentElement).getPropertyValue("--accent").trim()||"#4ea7ff");ctx.beginPath();pts.forEach((q,i)=>i?ctx.lineTo(...q):ctx.moveTo(...q));ctx.lineWidth=3;ctx.strokeStyle=grad;ctx.stroke();ctx.lineTo(pts.at(-1)[0],h-p);ctx.lineTo(pts[0][0],h-p);ctx.closePath();ctx.globalAlpha=.16;ctx.fillStyle=grad;ctx.fill();ctx.globalAlpha=1;pts.forEach((q,i)=>{ctx.beginPath();ctx.arc(q[0],q[1],4,0,Math.PI*2);ctx.fillStyle="#fff";ctx.fill();ctx.fillStyle="#8794ad";ctx.fillText(days[i].slice(5),q[0]-13,h-8)})}
+function renderMembers(){const rows=state.tickets.slice(0,6).map(t=>`<tr><td><b>${esc(t.userId)}</b></td><td>${esc(gameById(t.gameId).name)}</td><td>${t.total}</td><td>${t.total-t.used}</td><td>${esc(t.rewardType)}</td><td>${statusBadge(t.status)}</td></tr>`);$("#memberRecentTable").innerHTML=table(["User ID","Game","Total","Sisa","Benefit","Status"],rows,"Belum ada member")}
+function normalizeTicketStatus(t){if(t.status==="disabled")return;t.status=t.expired<isoDate()?"expired":t.used>=t.total?"done":"active"}
+function renderTickets(){state.tickets.forEach(normalizeTicketStatus);const q=$("#ticketSearch").value.trim().toLowerCase(),g=$("#ticketGameFilter").value,s=$("#ticketStatusFilter").value;const list=state.tickets.filter(t=>(!q||t.userId.toLowerCase().includes(q)||t.id.toLowerCase().includes(q))&&(!g||t.gameId===g)&&(!s||t.status===s));const rows=list.map(t=>`<tr><td><b>${esc(t.id)}</b><div class="muted small">${esc(t.created)}</div></td><td><b>${esc(t.userId)}</b></td><td>${esc(gameById(t.gameId).name)}</td><td>${t.total}</td><td>${t.used}</td><td><b>${t.total-t.used}</b></td><td>${esc(t.rewardType)}<div class="muted small">${esc(t.rewardValue||"-")}</div></td><td>${esc(t.expired)}</td><td>${statusBadge(t.status)}</td><td><div class="table-actions"><button class="mini-btn" data-ticket-use="${t.id}">Gunakan</button><button class="mini-btn" data-ticket-toggle="${t.id}">${t.status==="disabled"?"Aktifkan":"Nonaktif"}</button><button class="mini-btn" data-ticket-delete="${t.id}">Hapus</button></div></td></tr>`);$("#ticketsTable").innerHTML=table(["Ticket ID","Member","Game","Total","Dipakai","Sisa","Benefit","Expired","Status","Aksi"],rows,"Tiket tidak ditemukan")}
+function renderGames(){$("#readyUrl").textContent=state.games.filter(g=>g.url).length;$("#readyWebhook").textContent=state.games.filter(g=>g.webhook).length;$("#readyActive").textContent=state.games.filter(g=>g.status==="active").length;$("#readyTotal").textContent=state.games.length;$("#gamesGrid").innerHTML=state.games.map(g=>`<div class="card glass game-card"><div class="card-head"><span class="game-code">${esc(g.code)}</span>${statusBadge(g.status)}</div><h3>${esc(g.name)}</h3><p class="muted small">${esc(g.start||"-")} — ${esc(g.end||"-")}</p><div class="game-meta"><div>🎮 ${num(g.plays||0)} plays</div><div>🎟 Limit ${g.dailyLimit||"∞"}/hari</div><div>🔗 ${g.webhook?"Webhook ready":"Local only"}</div><div>🎁 ${(g.rewardTypes||[]).length} benefit</div></div><div class="pill-list">${(g.rewardTypes||[]).map(x=>`<span class="pill">${esc(x)}</span>`).join("")}</div><div class="game-actions" style="margin-top:17px"><button class="btn secondary" data-game-preview="${g.id}">Preview</button><button class="mini-btn" data-game-edit="${g.id}">Edit</button><button class="mini-btn" data-game-rewards="${g.id}">Benefit</button><button class="mini-btn" data-game-delete="${g.id}">Hapus</button></div></div>`).join("")}
+function renderTheme(){const t=state.theme;$("#themeName").value=t.name;$("#themeLogo").value=t.logo;$("#themeBackgroundType").value=t.backgroundType;$("#themeBackground").value=t.background;$("#primaryText").value=t.primary;$("#primaryColor").value=t.primary;$("#accentText").value=t.accent;$("#accentColor").value=t.accent;$("#themeRadius").value=t.radius;$("#themeOpacity").value=t.opacity;$("#themeOverlay").value=t.overlay;$("#themeVideoBlur").value=t.blur;$("#themeVideoSpeed").value=t.speed;$("#themeVideoOpacity").value=t.videoOpacity;updateThemeFields();updateThemeLabels();applyTheme()}
+function applyTheme(){const t=state.theme,r=document.documentElement.style;r.setProperty("--primary",t.primary);r.setProperty("--accent",t.accent);r.setProperty("--radius",`${t.radius}px`);r.setProperty("--glass",Number(t.opacity)/100);const img=$("#dashboardBgImage"),video=$("#dashboardBgVideo"),pimg=$("#themePreviewImage"),pvideo=$("#themePreviewVideo");[img,pimg].forEach(x=>{x.style.display="none";x.removeAttribute("src")});[video,pvideo].forEach(x=>{x.pause();x.style.display="none";if(x.src&&!x.src.startsWith("blob:"))x.removeAttribute("src")});const useURL=src=>{if(t.backgroundType==="image"){[img,pimg].forEach(x=>{x.src=src;x.style.display="block"})}else if(t.backgroundType==="video-url"){[video,pvideo].forEach(x=>{x.src=src;x.style.display="block";x.playbackRate=Number(t.speed)||1;x.play().catch(()=>{})})}};if(t.background&&["image","video-url"].includes(t.backgroundType))useURL(t.background);if(t.backgroundType==="video-upload")loadThemeVideo().then(blob=>{if(!blob)return;const url=URL.createObjectURL(blob);[video,pvideo].forEach(x=>{x.src=url;x.style.display="block";x.playbackRate=Number(t.speed)||1;x.play().catch(()=>{})})});[video,pvideo].forEach(x=>{x.style.filter=`blur(${t.blur}px)`;x.style.opacity=Number(t.videoOpacity)/100});[$("#dashboardBgOverlay"),$("#themePreviewOverlay")].forEach(x=>x.style.background=`rgba(4,7,14,${Number(t.overlay)/100})`)}
+function updateThemeFields(){const type=$("#themeBackgroundType").value;$("#themeBackgroundUrlField").classList.toggle("hidden",type==="default"||type==="video-upload");$("#themeVideoUploadField").classList.toggle("hidden",type!=="video-upload");$("#themeBackgroundUrlLabel").textContent=type==="image"?"Image URL":"Video URL"}
+function updateThemeLabels(){$("#themeOverlayValue").textContent=$("#themeOverlay").value+"%";$("#themeVideoBlurValue").textContent=$("#themeVideoBlur").value+"px";$("#themeVideoOpacityValue").textContent=$("#themeVideoOpacity").value+"%"}
+function bonusKey(){return `${$("#bonusSettingGame").value}|${$("#bonusSettingRewardType").value}`}
+function updateBonusEditor(){const vals=state.randomBonuses[bonusKey()]||[];$("#bonusNominalValues").value=vals.join("\n");$("#bonusNominalPreview").className=`ticket-bonus-preview ${vals.length?"":"empty-preview"}`;$("#bonusNominalPreview").innerHTML=vals.length?vals.map(v=>`<span class="pill">${/^\d+$/.test(v)?money(v):esc(v)}</span>`).join(""):"Belum ada nominal random untuk kombinasi ini."}
+function renderPrizes(){const claimed=state.prizes.reduce((a,p)=>a+p.claimed,0),quota=state.prizes.reduce((a,p)=>a+p.quota,0),prob=state.prizes.reduce((a,p)=>a+Number(p.probability),0);$("#prizeHealth").innerHTML=`<div><span class="muted small">Total Prize</span><b>${state.prizes.length}</b></div><div><span class="muted small">Total Kuota</span><b>${num(quota)}</b></div><div><span class="muted small">Claimed</span><b>${num(claimed)}</b></div><div><span class="muted small">Probability</span><b>${prob.toFixed(1)}%</b></div>`;const rows=state.prizes.map(p=>`<tr><td><b>${esc(p.name)}</b><div class="muted small">${esc(p.id)}</div></td><td>${esc(gameById(p.gameId).name)}</td><td>${esc(p.type)}</td><td>${/^\d+$/.test(p.value)&&p.type==="Saldo"?money(p.value):esc(p.value)}</td><td>${p.claimed}/${p.quota}</td><td>${p.probability}%</td><td><div class="table-actions"><button class="mini-btn" data-prize-edit="${p.id}">Edit</button><button class="mini-btn" data-prize-delete="${p.id}">Hapus</button></div></td></tr>`);$("#prizesTable").innerHTML=table(["Hadiah","Game","Jenis","Nilai","Claim/Kuota","Probabilitas","Aksi"],rows,"Belum ada hadiah")}
+function renderIntegration(){const x=state.integration;$("#integrationWebhook").value=x.webhook;$("#integrationSheet").value=x.sheet;$("#integrationSecret").value=x.secret;$("#integrationGame").value=x.gameId;$("#integrationRetry").value=String(x.retry);$("#integrationStatus").className=`status ${x.status==="connected"?"active":"draft"}`;$("#integrationStatus").textContent=x.status==="connected"?"Connected":"Not Tested";$("#payloadPreview").textContent=JSON.stringify({action:"GAME_RESULT",timestamp:new Date().toISOString(),sheet:x.sheet,secret:x.secret?"••••••••":"",gameCode:gameById(x.gameId).code,userId:"USR001",ticketId:"TKT-1001",result:"WIN",prize:"10000"},null,2)}
+function renderActivity(){const rows=state.activity.map(a=>`<tr><td>${esc(a.time)}</td><td><b>${esc(a.userId)}</b></td><td>${esc(gameById(a.gameId).name||"Sistem")}</td><td><span class="pill">${esc(a.type)}</span></td><td>${esc(a.detail)}</td><td>${a.amount?money(a.amount):"-"}</td></tr>`);$("#activityTable").innerHTML=table(["Waktu","User","Game","Tipe","Detail","Nilai"],rows,"Belum ada aktivitas")}
+function renderWinners(){const rows=state.winners.map(w=>`<tr><td>${esc(w.time)}</td><td><b>${esc(w.userId)}</b></td><td>${esc(gameById(w.gameId).name)}</td><td>${esc(w.prize)}</td><td>${Number(w.value)>100?money(w.value):esc(w.value)}</td><td>${statusBadge(w.status)}</td><td><div class="table-actions"><button class="mini-btn" data-winner-toggle="${w.id}">${w.status==="pending"?"Tandai Terkirim":"Buka Lagi"}</button><button class="mini-btn" data-winner-delete="${w.id}">Hapus</button></div></td></tr>`);$("#winnersTable").innerHTML=table(["Waktu","Member","Game","Hadiah","Nilai","Status","Aksi"],rows,"Belum ada pemenang")}
+function renderAudit(){const rows=state.audit.map(a=>`<tr><td>${esc(a.time)}</td><td><b>${esc(a.admin)}</b></td><td><span class="pill">${esc(a.action)}</span></td><td>${esc(a.detail)}</td></tr>`);$("#auditTable").innerHTML=table(["Waktu","Admin","Action","Detail"],rows,"Belum ada audit log")}
+function renderAdmins(){const rows=state.admins.map(a=>`<tr><td><div class="admin-mini"><div class="avatar">${esc(a.name.split(/\s+/).map(x=>x[0]).join("").slice(0,2))}</div><div><b>${esc(a.name)}</b><div class="muted small">${esc(a.id)}</div></div></div></td><td>${esc(a.email)}</td><td><span class="pill">${esc(a.role)}</span></td><td>${statusBadge(a.status)}</td><td>${esc(a.lastLogin||"-")}</td><td><div class="table-actions"><button class="mini-btn" data-admin-access="${a.id}">Atur Akses</button><button class="mini-btn" data-admin-toggle="${a.id}">${a.status==="active"?"Nonaktif":"Aktifkan"}</button><button class="mini-btn" data-admin-delete="${a.id}">Hapus</button></div></td></tr>`);$("#adminsTable").innerHTML=table(["Admin","Email","Role","Status","Login Terakhir","Aksi"],rows,"Belum ada admin")}
+function renderPermissions(){const count=(key)=>Object.values(state.permissions[key]).reduce((a,p)=>a+Object.values(p).filter(Boolean).length,0);$("#permissionSummary").innerHTML=`<div class="card glass"><b>Super Admin</b><div class="stat-value">Full</div><span class="muted small">Seluruh menu dan tindakan</span></div><div class="card glass"><b>Admin Kedua</b><div class="stat-value">${count("admin2")}</div><span class="muted small">izin aktif dari ${featureDefs.length*actions.length}</span></div><div class="card glass"><b>Staff</b><div class="stat-value">${count("staff")}</div><span class="muted small">izin aktif dari ${featureDefs.length*actions.length}</span></div>`;let grid=`<div class="permission-grid"><div class="head feature-name">Fitur</div>${["Admin 2","Staff"].flatMap(r=>actions.map(a=>`<div class="head">${r}<br>${a}</div>`)).join("")}`;featureDefs.forEach(f=>{grid+=`<div class="feature-name">${f.icon} ${esc(f.label)}</div>`;["admin2","staff"].forEach(role=>actions.forEach(a=>grid+=`<div><label class="switch"><input type="checkbox" data-perm-role="${role}" data-perm-feature="${f.id}" data-perm-action="${a}" ${state.permissions[role][f.id][a]?"checked":""}><span class="slider"></span></label></div>`));});grid+="</div>";$("#permissionMatrixTable").innerHTML=grid;$("#featureSettingsGrid").innerHTML=featureDefs.map(f=>{const s=state.featureSettings[f.id];return `<div class="feature-setting"><div class="feature-setting-head"><div><b>${f.icon} ${esc(f.label)}</b><div class="muted small">ID: ${f.id}</div></div><label class="switch"><input type="checkbox" data-feature-enabled="${f.id}" ${s.enabled?"checked":""}><span class="slider"></span></label></div><div class="field"><label>Nama Menu</label><input class="input" data-feature-label="${f.id}" value="${esc(s.label)}"></div><div class="field"><label>Limit Operasional (0 = tanpa batas)</label><input class="input" type="number" min="0" data-feature-limit="${f.id}" value="${s.limit||0}"></div><label class="checkbox"><input type="checkbox" data-feature-confirm="${f.id}" ${s.requireConfirm?"checked":""}> Konfirmasi tindakan penting</label><label class="checkbox" style="margin-top:8px"><input type="checkbox" data-feature-audit="${f.id}" ${s.audit?"checked":""}> Simpan audit log</label></div>`}).join("")}
+function renderSecurity(){const a=currentAdmin();$("#failedLoginCount").textContent=state.failedLogins;$("#securityRoleCode").textContent=a?.role.split(" ").map(x=>x[0]).join("")||"-";$("#loginHistory").innerHTML=state.loginHistory.slice(0,20).map(l=>`<div class="login-log-item"><div><b>${esc(l.email)}</b><span>${esc(l.device||"Browser")}</span></div><div>${statusBadge(l.status==="success"?"active":"disabled")}<span>${esc(l.time)}</span></div></div>`).join("")||`<div class="empty-state">Belum ada riwayat login.</div>`}
+function renderSettings(){const s=state.settings;$("#settingPlatform").value=s.platform;$("#settingTimezone").value=s.timezone;$("#settingPagination").value=String(s.pagination);$("#settingSession").value=s.session;$("#settingCurrency").value=s.currency;$("#settingMaintenance").value=s.maintenance;document.title=s.platform}
+function openGamePreview(gameId){const g=gameById(gameId);if(/^https?:\/\//i.test(g.url)){window.open(g.url,"_blank","noopener");return}openModal(`Preview · ${g.name}`,`<div class="mini-game" id="miniGame"><div class="mini-game-track"></div><div class="runner">🔴</div><div class="runner r2">🔵</div><div class="runner r3">🟡</div></div><div class="game-console"><div><span class="muted small">Game Code</span><div class="badge-number">${esc(g.code)}</div></div><button class="btn" id="startMiniGame">MULAI SIMULASI</button></div><div class="notice" style="margin-top:12px">Preview bawaan berjalan sepenuhnya di file ini dan tidak mengurangi tiket member.</div>`);$("#startMiniGame").onclick=()=>{const arena=$("#miniGame");arena.classList.remove("running");void arena.offsetWidth;arena.classList.add("running");setTimeout(()=>toast("Simulasi selesai: kelereng kuning menang!"),2700)}}
+function openRewardManager(gameId){const g=gameById(gameId);openModal(`Jenis Benefit · ${g.name}`,`<div class="field"><label>Satu jenis benefit per baris</label><textarea id="rewardTypeEditor" class="input" style="min-height:220px">${esc((g.rewardTypes||[]).join("\n"))}</textarea></div><button class="btn full" id="saveRewardTypes">SIMPAN JENIS BENEFIT</button>`);$("#saveRewardTypes").onclick=()=>{g.rewardTypes=$("#rewardTypeEditor").value.split(/\n/).map(x=>x.trim()).filter(Boolean);if(!g.rewardTypes.length)return toast("Minimal satu jenis benefit.","error");save("GAME_REWARD_TYPES",`Jenis benefit ${g.name} diperbarui`);closeModal();populateRewardTypes();renderGames();toast("Jenis benefit tersimpan")}}
+function openCustomAccess(adminId){const a=state.admins.find(x=>x.id===adminId);if(!a||a.role==="Super Admin")return toast("Super Admin selalu memiliki akses penuh.","error");const base=clone(a.customPermissions||state.permissions[roleKey(a.role)]);openModal(`Akses Khusus · ${a.name}`,`<div class="notice" style="margin-bottom:14px">Pengaturan ini hanya berlaku untuk akun ini dan mengesampingkan permission role ${esc(a.role)}.</div><div class="table-wrap"><table class="data-table"><thead><tr><th>Fitur</th>${actions.map(x=>`<th>${esc(x)}</th>`).join("")}</tr></thead><tbody>${featureDefs.map(f=>`<tr><td><b>${f.icon} ${esc(f.label)}</b></td>${actions.map(x=>`<td><label class="switch"><input type="checkbox" data-custom-feature="${f.id}" data-custom-action="${x}" ${base[f.id][x]?"checked":""}><span class="slider"></span></label></td>`).join("")}</tr>`).join("")}</tbody></table></div><div class="form-actions" style="margin-top:16px"><button class="btn secondary" id="resetCustomAccess">Gunakan Role Default</button><button class="btn" id="saveCustomAccess">Simpan Akses Khusus</button></div>`,true);$("#saveCustomAccess").onclick=()=>{$$("[data-custom-feature]").forEach(el=>base[el.dataset.customFeature][el.dataset.customAction]=el.checked);a.customPermissions=base;save("ADMIN_PERMISSION",`Akses khusus ${a.email} diperbarui`);closeModal();toast("Akses khusus tersimpan")};$("#resetCustomAccess").onclick=()=>{a.customPermissions=null;save("ADMIN_PERMISSION_RESET",`Akses ${a.email} kembali ke role default`);closeModal();toast("Akses kembali mengikuti role")}}
+async function testWebhook(){const url=$("#integrationWebhook").value.trim();if(!/^https:\/\//i.test(url))return toast("Masukkan URL webhook HTTPS yang valid.","error");$("#integrationStatus").textContent="Testing...";try{const payload=JSON.parse($("#payloadPreview").textContent);await fetch(url,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify({...payload,action:"CONNECTION_TEST"})});state.integration.status="connected";save("INTEGRATION_TEST","Permintaan test webhook dikirim");renderIntegration();toast("Permintaan test berhasil dikirim. Mode no-cors tidak dapat membaca respons server.")}catch(e){state.integration.status="failed";save();$("#integrationStatus").textContent="Failed";toast(`Koneksi gagal: ${e.message}`,"error")}}
+function randomReward(gameId,type,fallback=""){const vals=state.randomBonuses[`${gameId}|${type}`]||[];return vals.length?vals[Math.floor(Math.random()*vals.length)]:fallback}
+function useTicket(id){const t=state.tickets.find(x=>x.id===id);if(!t)return toast("Data tiket tidak ditemukan.","error");normalizeTicketStatus(t);if(t.status!=="active"||t.used>=t.total)return toast("Tiket tidak aktif atau sudah habis.","error");t.used++;t.rewardValue=randomReward(t.gameId,t.rewardType,t.rewardValue);normalizeTicketStatus(t);gameById(t.gameId).plays=(gameById(t.gameId).plays||0)+1;logActivity("PLAY",`Tiket ${t.id} digunakan`,t.userId,t.gameId);if(Math.random()<.35){const eligible=state.prizes.filter(p=>p.gameId===t.gameId&&p.claimed<p.quota&&p.type!=="Tidak Menang");if(eligible.length){const p=eligible[Math.floor(Math.random()*eligible.length)];p.claimed++;state.winners.unshift({id:uid("WIN"),time:isoTime(),userId:t.userId,gameId:t.gameId,prize:p.name,value:Number(p.value)||p.value,status:"pending"});logActivity("PRIZE_WIN",`Menang ${p.name}`,t.userId,t.gameId,Number(p.value)||0);toast(`Selamat, ${t.userId} menang ${p.name}!`)}}save("TICKET_USED",`${t.id} digunakan oleh ${t.userId}`);renderAll()}
+function resetDatabase(){openModal("Reset Semua Data",`<div class="notice">Tindakan ini menghapus seluruh perubahan lokal dan mengembalikan data dummy awal.</div><div class="form-actions" style="margin-top:18px"><button class="btn danger" id="confirmResetDb">RESET DATABASE</button></div>`);$("#confirmResetDb").onclick=()=>{state=makeDefaultState();storage.set(state);closeModal();login(state.admins[0],true);toast("Database berhasil direset")}}
+function exportBackup(){download(`minigame-backup-${isoDate()}.json`,JSON.stringify(state,null,2),"application/json")}
+function importBackup(){const input=document.createElement("input");input.type="file";input.accept="application/json";input.onchange=async()=>{try{const data=JSON.parse(await input.files[0].text());if(!data.version||!data.admins||!data.games)throw new Error("Format backup tidak valid");state=data;storage.set(state);renderAll();toast("Backup berhasil dipulihkan")}catch(e){toast(e.message,"error")}};input.click()}
+function openQuickActions(){openModal("Tambah Cepat & Utilitas",`<div class="quick-grid"><button class="quick-card" data-quick="member"><b>👥 Tambah Member</b><span>Buka form akses dan tiket member.</span></button><button class="quick-card" data-quick="game"><b>🎮 Tambah Game</b><span>Buat minigame baru tanpa coding ulang.</span></button><button class="quick-card" data-quick="backup"><b>⬇ Export Backup</b><span>Unduh seluruh data dalam JSON.</span></button><button class="quick-card" data-quick="restore"><b>⬆ Import Backup</b><span>Pulihkan data dari file JSON.</span></button><button class="quick-card" data-quick="reset"><b>🧹 Reset Database</b><span>Kembalikan data dummy awal.</span></button><button class="quick-card" data-quick="preview"><b>🚀 Preview Game</b><span>Jalankan game bawaan tanpa tiket.</span></button></div>`);$$('[data-quick]').forEach(b=>b.onclick=()=>{const q=b.dataset.quick;if(q==="member"){closeModal();showPage("members")}if(q==="game"){closeModal();showPage("games");$("#gameName").focus()}if(q==="backup"){exportBackup()}if(q==="restore"){importBackup()}if(q==="reset"){closeModal();resetDatabase()}if(q==="preview"){closeModal();openGamePreview(state.games[0].id)}})}
+function setupEvents(){
+ $("#loginForm").addEventListener("submit",e=>{e.preventDefault();const email=$("#loginEmail").value.trim().toLowerCase(),pass=$("#loginPassword").value,a=state.admins.find(x=>x.email.toLowerCase()===email&&x.password===pass&&x.status==="active");if(!a){state.failedLogins++;state.loginHistory.unshift({id:uid("LOG"),time:isoTime(),email,status:"failed",device:navigator.userAgent.slice(0,80)});save();toast("Email, password, atau status admin tidak valid.","error");return}login(a)});
+ $("#togglePassword").onclick=()=>$("#loginPassword").type=$("#loginPassword").type==="password"?"text":"password";$("#forgotPassword").onclick=e=>{e.preventDefault();toast("Gunakan akun Super Admin bawaan atau reset data browser.","error")};$("#logoutBtn").onclick=logout;$("#mobileMenu").onclick=()=>$("#sidebar").classList.toggle("open");$("#modalClose").onclick=closeModal;$("#modalBackdrop").onclick=e=>{if(e.target.id==="modalBackdrop")closeModal()};
+ $$('.nav-item').forEach(b=>b.onclick=()=>showPage(b.dataset.page));$$('[data-go]').forEach(b=>b.onclick=()=>showPage(b.dataset.go));$("#quickAddBtn").onclick=openQuickActions;$("#refreshBtn").onclick=()=>{renderAll();toast("Dashboard diperbarui")};window.addEventListener("resize",()=>{if($("#page-dashboard").classList.contains("active"))drawChart(dateFilteredActivity())});
+ $("#globalSearch").addEventListener("keydown",e=>{if(e.key!=="Enter")return;const q=e.target.value.trim().toLowerCase();if(!q)return;const ticket=state.tickets.find(t=>t.userId.toLowerCase().includes(q)||t.id.toLowerCase().includes(q)),game=state.games.find(g=>g.name.toLowerCase().includes(q)||g.code.toLowerCase().includes(q));if(ticket){showPage("tickets");$("#ticketSearch").value=q;renderTickets()}else if(game){showPage("games");setTimeout(()=>document.querySelector(`[data-game-edit="${game.id}"]`)?.scrollIntoView({behavior:"smooth",block:"center"}),100)}else toast("Data tidak ditemukan.","error")});
+ $("#dashboardRange").onchange=()=>{$("#dashboardDatePicker").classList.toggle("hidden",$("#dashboardRange").value!=="date");renderDashboard()};$("#applyDashboardDate").onclick=renderDashboard;
+ $("#memberGame").onchange=populateRewardTypes;$("#memberRewardType").onchange=updateRewardPanel;$("#memberRewardMode").onchange=updateRewardPanel;$("#bulkGame").onchange=populateRewardTypes;$("#bonusSettingGame").onchange=populateRewardTypes;$("#bonusSettingRewardType").onchange=updateBonusEditor;$("#manageRewardTypesBtn").onclick=()=>openRewardManager($("#memberGame").value);
+ $("#memberForm").addEventListener("submit",e=>{e.preventDefault();if(!permissionFor("members","create"))return toast("Tidak punya izin tambah member.","error");const userId=$("#memberUserId").value.trim().toUpperCase(),gameId=$("#memberGame").value,total=Number($("#memberTickets").value),type=$("#memberRewardType").value,mode=$("#memberRewardMode").value,fallback=$("#memberRewardValue").value.trim();if(!userId||!gameId||total<1)return toast("Lengkapi data member.","error");const existing=state.tickets.find(t=>t.userId===userId&&t.gameId===gameId&&t.status!=="expired");if(existing){existing.total+=total;existing.rewardType=type;existing.rewardMode=mode;existing.rewardValue=randomReward(gameId,type,fallback);existing.expired=$("#memberExpired").value;existing.status=$("#memberStatus").value}else state.tickets.unshift({id:uid("TKT"),userId,gameId,rewardType:type,rewardMode:mode,rewardValue:randomReward(gameId,type,fallback),total,used:0,active:$("#memberActive").value,expired:$("#memberExpired").value,status:$("#memberStatus").value,notes:$("#memberNotes").value.trim(),created:isoTime()});logActivity("TICKET_CREATED",`${total} tiket diberikan`,userId,gameId);save("MEMBER_CREATE",`${userId} mendapat ${total} tiket`);e.target.reset();initDates();populateGameSelects();populateRewardTypes();renderAll();toast("Akses member dan tiket berhasil dibuat")});
+ $("#bulkCreateBtn").onclick=()=>{if(!permissionFor("members","create"))return toast("Tidak punya izin import member.","error");const lines=$("#bulkMembers").value.split(/\n/).map(x=>x.trim()).filter(Boolean),gameId=$("#bulkGame").value,type=$("#bulkRewardType").value;if(!lines.length)return toast("Masukkan daftar member.","error");let ok=0;lines.forEach(line=>{const [raw,countRaw]=line.split(","),userId=(raw||"").trim().toUpperCase(),total=Math.max(1,Number(countRaw)||1);if(!userId)return;const existing=state.tickets.find(t=>t.userId===userId&&t.gameId===gameId&&t.status!=="expired");if(existing)existing.total+=total;else state.tickets.unshift({id:uid("TKT"),userId,gameId,rewardType:type,rewardMode:"random",rewardValue:randomReward(gameId,type,""),total,used:0,active:isoDate(),expired:addDays(14),status:"active",notes:"Bulk import",created:isoTime()});logActivity("TICKET_CREATED",`${total} tiket bulk`,userId,gameId);ok++});save("BULK_MEMBER",`${ok} member diproses`);$("#bulkMembers").value="";renderAll();toast(`${ok} member berhasil diproses`)};
+ $("#importDemoBtn").onclick=()=>{const input=document.createElement("input");input.type="file";input.accept=".csv,text/csv";input.onchange=async()=>{$("#bulkMembers").value=(await input.files[0].text()).replace(/\r/g,"");toast("CSV dimuat. Periksa lalu klik Preview & Import.")};input.click()};
+ ["ticketSearch","ticketGameFilter","ticketStatusFilter"].forEach(id=>$("#"+id).addEventListener(id==="ticketSearch"?"input":"change",renderTickets));$("#resetTicketFilter").onclick=()=>{$("#ticketSearch").value="";$("#ticketGameFilter").value="";$("#ticketStatusFilter").value="";renderTickets()};$("#exportTicketsBtn").onclick=()=>download(`tickets-${isoDate()}.csv`,toCSV(state.tickets),"text/csv");
+ $("#ticketsTable").onclick=e=>{const b=e.target.closest("button");if(!b)return;if(b.dataset.ticketUse)useTicket(b.dataset.ticketUse);if(b.dataset.ticketToggle){const t=state.tickets.find(x=>x.id===b.dataset.ticketToggle);t.status=t.status==="disabled"?"active":"disabled";save("TICKET_STATUS",`${t.id} menjadi ${t.status}`);renderAll()}if(b.dataset.ticketDelete){if(!permissionFor("tickets","delete"))return toast("Tidak punya izin hapus tiket.","error");const id=b.dataset.ticketDelete;if(confirm("Hapus tiket ini?")){state.tickets=state.tickets.filter(x=>x.id!==id);save("TICKET_DELETE",id);renderAll()}}};
+ $("#gameForm").addEventListener("submit",e=>{e.preventDefault();const id=$("#editingGameId").value,obj={name:$("#gameName").value.trim(),code:$("#gameCode").value.trim().toUpperCase(),url:$("#gameUrl").value.trim(),webhook:$("#gameWebhook").value.trim(),start:$("#gameStart").value,end:$("#gameEnd").value,status:$("#gameStatus").value,dailyLimit:Number($("#gameDailyLimit").value)||0};if(!obj.name||!obj.code||!obj.url)return toast("Nama, kode, dan URL game wajib diisi.","error");if(id){const g=gameById(id);Object.assign(g,obj)}else state.games.unshift({id:uid("GAME"),...obj,rewardTypes:["Saldo","Kupon"],plays:0});save(id?"GAME_UPDATE":"GAME_CREATE",`${obj.code} ${id?"diperbarui":"dibuat"}`);resetGameForm();renderAll();toast("Konfigurasi game tersimpan")});
+ const resetGameForm=()=>{$("#gameForm").reset();$("#editingGameId").value="";$("#gameUrl").value="builtin://marble";initDates()};$("#resetGameForm").onclick=resetGameForm;$("#newGameFocus").onclick=()=>{$("#gameName").focus();resetGameForm()};$("#gamesGrid").onclick=e=>{const b=e.target.closest("button");if(!b)return;if(b.dataset.gamePreview)openGamePreview(b.dataset.gamePreview);if(b.dataset.gameRewards)openRewardManager(b.dataset.gameRewards);if(b.dataset.gameEdit){const g=gameById(b.dataset.gameEdit);$("#editingGameId").value=g.id;$("#gameName").value=g.name;$("#gameCode").value=g.code;$("#gameUrl").value=g.url;$("#gameWebhook").value=g.webhook;$("#gameStart").value=g.start;$("#gameEnd").value=g.end;$("#gameStatus").value=g.status;$("#gameDailyLimit").value=g.dailyLimit;window.scrollTo({top:0,behavior:"smooth"})}if(b.dataset.gameDelete){if(!permissionFor("games","delete"))return toast("Tidak punya izin hapus game.","error");const id=b.dataset.gameDelete;if(state.tickets.some(t=>t.gameId===id))return toast("Game masih digunakan oleh data tiket. Nonaktifkan saja agar riwayat tidak rusak.","error");if(confirm("Hapus game ini?")){state.games=state.games.filter(x=>x.id!==id);save("GAME_DELETE",id);renderAll()}}};
+ $("#themeBackgroundType").onchange=updateThemeFields;["themeOverlay","themeVideoBlur","themeVideoOpacity"].forEach(id=>$("#"+id).oninput=updateThemeLabels);[["primaryText","primaryColor"],["accentText","accentColor"]].forEach(([t,c])=>{$("#"+t).oninput=()=>$("#"+c).value=$("#"+t).value;$("#"+c).oninput=()=>$("#"+t).value=$("#"+c).value});
+ $("#themeForm").addEventListener("submit",e=>{e.preventDefault();state.theme={name:$("#themeName").value.trim(),logo:$("#themeLogo").value.trim(),backgroundType:$("#themeBackgroundType").value,background:$("#themeBackground").value.trim(),primary:$("#primaryText").value,accent:$("#accentText").value,radius:Number($("#themeRadius").value),opacity:Number($("#themeOpacity").value),overlay:Number($("#themeOverlay").value),blur:Number($("#themeVideoBlur").value),speed:Number($("#themeVideoSpeed").value),videoOpacity:Number($("#themeVideoOpacity").value)};save("THEME_UPDATE",state.theme.name);applyTheme();toast("Tema berhasil diterapkan")});$("#resetThemeBtn").onclick=()=>{state.theme=makeDefaultState().theme;save("THEME_RESET","Tema default diterapkan");renderTheme();toast("Tema dikembalikan ke default")};$("#themeVideoFile").onchange=async e=>{const file=e.target.files[0];if(!file)return;if(file.size>80*1024*1024)return toast("Video maksimal 80 MB.","error");await saveThemeVideo(file);$("#themeVideoStatus").textContent=`${file.name} · ${(file.size/1024/1024).toFixed(1)} MB`;state.theme.backgroundType="video-upload";save("VIDEO_BACKGROUND","Video background disimpan ke IndexedDB");applyTheme();toast("Video background tersimpan")};$("#removeThemeVideoBtn").onclick=async()=>{await deleteThemeVideo();$("#themeVideoStatus").textContent="Belum ada video yang dipilih.";state.theme.backgroundType="default";save("VIDEO_BACKGROUND_DELETE","Video background dihapus");renderTheme()};
+ $("#randomBonusForm").addEventListener("submit",e=>{e.preventDefault();const vals=$("#bonusNominalValues").value.split(/\n|,/).map(x=>x.trim()).filter(Boolean);if(!vals.length)return toast("Masukkan minimal satu nilai bonus.","error");state.randomBonuses[bonusKey()]=vals;save("RANDOM_BONUS",`${bonusKey()} diperbarui`);updateBonusEditor();updateRewardPanel();toast("Daftar random tersimpan")});$("#clearBonusNominalBtn").onclick=()=>{delete state.randomBonuses[bonusKey()];save("RANDOM_BONUS_DELETE",bonusKey());updateBonusEditor();updateRewardPanel();toast("Setting random dihapus")};
+ $("#prizeForm").addEventListener("submit",e=>{e.preventDefault();state.prizes.unshift({id:uid("PRZ"),name:$("#prizeName").value.trim(),gameId:$("#prizeGame").value,type:$("#prizeType").value,value:$("#prizeValue").value.trim(),quota:Number($("#prizeQuota").value)||0,claimed:0,probability:Number($("#prizeProbability").value)||0});save("PRIZE_CREATE",$("#prizeName").value);e.target.reset();renderAll();toast("Hadiah berhasil ditambahkan")});$("#prizesTable").onclick=e=>{const b=e.target.closest("button");if(!b)return;if(b.dataset.prizeDelete){const id=b.dataset.prizeDelete;if(confirm("Hapus hadiah?")){state.prizes=state.prizes.filter(x=>x.id!==id);save("PRIZE_DELETE",id);renderAll()}}if(b.dataset.prizeEdit){const p=state.prizes.find(x=>x.id===b.dataset.prizeEdit);openModal("Edit Hadiah",`<div class="form-grid"><div class="field full-row"><label>Nama</label><input id="editPrizeName" class="input" value="${esc(p.name)}"></div><div class="field"><label>Kuota</label><input id="editPrizeQuota" class="input" type="number" value="${p.quota}"></div><div class="field"><label>Probabilitas</label><input id="editPrizeProb" class="input" type="number" step=".01" value="${p.probability}"></div></div><button class="btn full" id="savePrizeEdit">Simpan</button>`);$("#savePrizeEdit").onclick=()=>{p.name=$("#editPrizeName").value;p.quota=Number($("#editPrizeQuota").value);p.probability=Number($("#editPrizeProb").value);save("PRIZE_UPDATE",p.id);closeModal();renderAll();toast("Hadiah diperbarui")}}};
+ $("#integrationForm").addEventListener("submit",e=>{e.preventDefault();state.integration={webhook:$("#integrationWebhook").value.trim(),sheet:$("#integrationSheet").value.trim(),secret:$("#integrationSecret").value,gameId:$("#integrationGame").value,retry:Number($("#integrationRetry").value),status:state.integration.status};save("INTEGRATION_SAVE","Konfigurasi webhook disimpan");renderIntegration();toast("Konfigurasi integrasi tersimpan")});$("#testIntegrationBtn").onclick=testWebhook;["integrationSheet","integrationSecret","integrationGame"].forEach(id=>$("#"+id).oninput=renderIntegration);
+ $("#exportActivityBtn").onclick=()=>download(`activity-${isoDate()}.csv`,toCSV(state.activity),"text/csv");$("#exportWinnersBtn").onclick=()=>download(`winners-${isoDate()}.csv`,toCSV(state.winners),"text/csv");$("#winnersTable").onclick=e=>{const b=e.target.closest("button");if(!b)return;if(b.dataset.winnerToggle){const w=state.winners.find(x=>x.id===b.dataset.winnerToggle);w.status=w.status==="pending"?"delivered":"pending";save("WINNER_STATUS",`${w.id} ${w.status}`);renderAll()}if(b.dataset.winnerDelete){state.winners=state.winners.filter(x=>x.id!==b.dataset.winnerDelete);save("WINNER_DELETE",b.dataset.winnerDelete);renderAll()}};
+ $("#adminForm").addEventListener("submit",e=>{e.preventDefault();const email=$("#adminEmail").value.trim().toLowerCase();if(state.admins.some(a=>a.email.toLowerCase()===email))return toast("Email admin sudah digunakan.","error");state.admins.push({id:uid("ADM"),name:$("#adminName").value.trim(),email,password:$("#adminTempPassword").value,role:$("#adminRole").value,status:$("#adminStatus").value,lastLogin:"-",customPermissions:null});save("ADMIN_CREATE",email);e.target.reset();renderAll();toast("Admin berhasil dibuat")});$("#adminsTable").onclick=e=>{const b=e.target.closest("button");if(!b)return;if(b.dataset.adminAccess)openCustomAccess(b.dataset.adminAccess);if(b.dataset.adminToggle){const a=state.admins.find(x=>x.id===b.dataset.adminToggle);if(a.id===currentAdmin().id)return toast("Tidak dapat menonaktifkan akun yang sedang digunakan.","error");a.status=a.status==="active"?"disabled":"active";save("ADMIN_STATUS",`${a.email} ${a.status}`);renderAll()}if(b.dataset.adminDelete){const a=state.admins.find(x=>x.id===b.dataset.adminDelete);if(a.role==="Super Admin"||a.id===currentAdmin().id)return toast("Super Admin aktif tidak dapat dihapus.","error");if(confirm("Hapus admin ini?")){state.admins=state.admins.filter(x=>x.id!==a.id);save("ADMIN_DELETE",a.email);renderAll()}}};
+ $("#presetAdminBtn").onclick=()=>{const d=makeDefaultState();state.permissions.admin2=d.permissions.admin2;renderPermissions();toast("Preset Admin Kedua diterapkan. Klik Save Permissions.")};$("#presetStaffBtn").onclick=()=>{const d=makeDefaultState();state.permissions.staff=d.permissions.staff;renderPermissions();toast("Preset Staff diterapkan. Klik Save Permissions.")};$("#savePermissionsBtn").onclick=()=>{$$("[data-perm-role]").forEach(x=>state.permissions[x.dataset.permRole][x.dataset.permFeature][x.dataset.permAction]=x.checked);$$("[data-feature-enabled]").forEach(x=>{const id=x.dataset.featureEnabled,s=state.featureSettings[id];s.enabled=x.checked;s.label=$(`[data-feature-label="${id}"]`).value.trim()||featureDefs.find(f=>f.id===id).label;s.limit=Number($(`[data-feature-limit="${id}"]`).value)||0;s.requireConfirm=$(`[data-feature-confirm="${id}"]`).checked;s.audit=$(`[data-feature-audit="${id}"]`).checked});save("PERMISSIONS_SAVE","Matriks permission dan setting fitur diperbarui");applyFeatureSettings();renderPermissions();toast("Permission berhasil disimpan")};
+ $("#passwordForm").addEventListener("submit",e=>{e.preventDefault();const a=currentAdmin(),old=$("#currentPassword").value,n=$("#newPassword").value,c=$("#confirmPassword").value;if(old!==a.password)return toast("Password saat ini salah.","error");if(n!==c)return toast("Konfirmasi password tidak sama.","error");a.password=n;save("PASSWORD_CHANGE",a.email);e.target.reset();toast("Password berhasil diubah")});$("#logoutAllBtn").onclick=logout;
+ $("#settingsForm").addEventListener("submit",e=>{e.preventDefault();state.settings={platform:$("#settingPlatform").value.trim(),timezone:$("#settingTimezone").value,pagination:Number($("#settingPagination").value),session:$("#settingSession").value,currency:$("#settingCurrency").value,maintenance:$("#settingMaintenance").value};save("SYSTEM_SETTINGS","Pengaturan sistem diperbarui");renderSettings();toast("Pengaturan sistem tersimpan")});
+}
+function db(){return new Promise((res,rej)=>{const r=indexedDB.open("MinigameSingleFileDB",1);r.onupgradeneeded=()=>r.result.createObjectStore("media");r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error)})}
+async function saveThemeVideo(file){try{const d=await db();await new Promise((res,rej)=>{const tx=d.transaction("media","readwrite");tx.objectStore("media").put(file,"themeVideo");tx.oncomplete=res;tx.onerror=()=>rej(tx.error)});d.close()}catch(e){toast("Browser tidak dapat menyimpan video: "+e.message,"error")}}
+async function loadThemeVideo(){try{const d=await db();const v=await new Promise((res,rej)=>{const r=d.transaction("media").objectStore("media").get("themeVideo");r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error)});d.close();return v}catch{return null}}
+async function deleteThemeVideo(){try{const d=await db();await new Promise((res,rej)=>{const tx=d.transaction("media","readwrite");tx.objectStore("media").delete("themeVideo");tx.oncomplete=res;tx.onerror=()=>rej(tx.error)});d.close()}catch{}}
+function boot(){initDates();setupEvents();resetGameFormDefaults();const params=new URLSearchParams(location.search),preview=params.get("preview")==="1";const remembered=currentAdmin();if(preview)login(state.admins.find(a=>a.role==="Super Admin")||state.admins[0],true);else if(remembered&&$("#rememberMe").checked)login(remembered);else{$("#loginScreen").classList.remove("hidden");$("#app").classList.add("hidden")}}
+function resetGameFormDefaults(){if(!$("#gameUrl").value)$("#gameUrl").value="builtin://marble"}
+document.addEventListener("DOMContentLoaded",boot);
+})();
+
+</script>
+</body>
+</html>
