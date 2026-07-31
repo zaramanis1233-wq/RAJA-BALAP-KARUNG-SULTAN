@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#070913">
 <meta name="description" content="CERIABET Premium Gaming Control Center 2026">
-<title>Admin Kedua · CERIABET Premium Control Center</title>
+<title>Super Admin · CERIABET Premium Control Center</title>
 <link rel="icon" id="dynamicFavicon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%237c3aed'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-size='26' font-family='Arial' font-weight='700' fill='white'%3ECB%3C/text%3E%3C/svg%3E">
 <style>
 :root{--primary:#7c3aed;--secondary:#c026d3;--accent:#22d3ee;--bg:#060711;--panel:#101325;--panel2:#171b32;--text:#f8f8ff;--muted:#9ca4c2;--line:rgba(255,255,255,.10);--success:#22c55e;--warning:#f59e0b;--danger:#ef4444;--radius:22px;--shadow:0 28px 90px rgba(0,0,0,.45);--font:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
@@ -50,11 +50,44 @@ body:after{content:"";position:fixed;inset:0;pointer-events:none;background-imag
 <div id="app"></div><div class="toast-area" id="toastArea"></div>
 <script>
 'use strict';
-const DEFAULT_PORTAL_MODE='admin_second';const PORTAL_MODE=new URLSearchParams(location.search).get('portal')||DEFAULT_PORTAL_MODE;
+const DEFAULT_PORTAL_MODE='super_admin';
+const ALLOWED_PORTAL_MODES=['super_admin','admin_second','member'];
+const REQUESTED_PORTAL_MODE=new URLSearchParams(location.search).get('portal');
+const PORTAL_MODE=ALLOWED_PORTAL_MODES.includes(REQUESTED_PORTAL_MODE)?REQUESTED_PORTAL_MODE:DEFAULT_PORTAL_MODE;
 const APP_KEY='ceriabet_platform_v3';
 const LEGACY_KEY='ceriabet_single_file_v1';
 const SESSION_KEY='ceriabet_session_v3_'+PORTAL_MODE;
 const DB_NAME='ceriabet_assets_v3';
+
+/* Login harus selalu dimulai dari halaman yang bersih.
+   - Hapus parameter identitas dari URL login.
+   - Hapus hash dashboard/game agar link tidak melewati halaman login.
+   - Hapus sesi lama saat halaman dibuka atau dimuat ulang. */
+function prepareSecureLoginEntry(){
+  const url=new URL(location.href);
+  const identityParams=new Set([
+    'id','uid','userid','memberid','accountid','email','username',
+    'token','logintoken','session','sessionid','auth','autologin',
+    'password','pass','credential','credentials'
+  ]);
+  let changed=false;
+  [...url.searchParams.keys()].forEach(key=>{
+    const normalized=key.toLowerCase().replace(/[^a-z0-9]/g,'');
+    if(identityParams.has(normalized)){
+      url.searchParams.delete(key);
+      changed=true;
+    }
+  });
+  if(url.hash){
+    url.hash='';
+    changed=true;
+  }
+  sessionStorage.removeItem(SESSION_KEY);
+  if(changed){
+    history.replaceState(null,'',url.pathname+url.search);
+  }
+}
+prepareSecureLoginEntry();
 const DB_STORE='assets';
 const qs=(s,r=document)=>r.querySelector(s),qsa=(s,r=document)=>[...r.querySelectorAll(s)];
 const uid=()=>crypto.randomUUID?crypto.randomUUID():Date.now().toString(36)+Math.random().toString(36).slice(2);
@@ -99,40 +132,11 @@ function portalMediaHTML(cfg){const blur=Number(cfg.blur)||0,opacity=Number(cfg.
 function brandHTML(sub='PREMIUM GAMING PLATFORM'){const t=state.theme;return `<div class="brand">${t.logoRef?assetTag(t.logoRef,'image','brand-logo'):'<div class="brand-mark">CB</div>'}<div class="brand-copy"><b>${esc(t.brandName||'CERIABET')}</b><span>${esc(sub||t.brandTagline||'PREMIUM GAMING PLATFORM')}</span></div></div>`}
 function route(){const hash=location.hash.replace('#','');if(PORTAL_MODE==='member'){if(hash==='game'&&session?.type==='member')renderGame();else renderMemberLogin();return}if(hash==='admin'&&session?.type==='admin'&&session.role===PORTAL_MODE){renderDashboard();return}renderLogin()}
 window.addEventListener('hashchange',route);
-function renderLogin(){saveSession(null);document.body.className='login-page';const isA2=PORTAL_MODE==='admin_second',cfg=state.theme.portal[PORTAL_MODE]||defaultPortal();const roleTitle=isA2?'ADMIN KEDUA':'SUPER ADMIN',heading=isA2?'Akses operasional terkontrol':'Pusat kendali penuh platform',description=isA2?'Kelola member, tiket, game, hadiah, dan asset sesuai permission yang diberikan Super Admin.':'Kelola branding, theme, background, admin, member, game, hadiah, audit, dan seluruh konfigurasi dari satu dashboard.',email=isA2?'davin@example.com':'zaramanis1233@gmail.com',password=isA2?'Admin123!':'Click8899@';qs('#app').innerHTML=`<main class="login-shell">${portalMediaHTML(cfg)}<section class="login-visual"><div>${brandHTML('GAME PLATFORM CONTROL CENTER')}<h1>${isA2?'Operasional aman.<br>Brand tetap konsisten.':'Super Admin.<br>One control center.'}</h1><p>${description}</p></div><div class="feature-grid"><div class="feature"><b>Dynamic Branding</b><span class="muted small">Logo, warna, font, banner, dan media terpusat.</span></div><div class="feature"><b>Role Permission</b><span class="muted small">Akses Admin Kedua mengikuti izin Super Admin.</span></div><div class="feature"><b>Asset Validation</b><span class="muted small">Whitelist file, size limit, hash, dan history upload.</span></div><div class="feature"><b>Responsive 2026</b><span class="muted small">Desktop, tablet, dan mobile dalam satu sistem.</span></div></div></section><section class="login-panel">${brandHTML(roleTitle)}<div style="margin-top:30px"><span class="badge active">SECURE ROLE ACCESS</span><h2 style="font-size:2rem;margin:14px 0 8px">${heading}</h2><p class="muted">Masuk menggunakan akun ${roleTitle}.</p><form id="loginForm" class="stack"><div class="field"><label>Email</label><input class="input" id="loginEmail" type="email" autocomplete="username" value="${email}" required></div><div class="field"><label>Password</label><div class="password-wrap"><input class="input" id="loginPassword" type="password" autocomplete="current-password" value="${password}" required><button class="icon-btn" type="button" id="showPass">👁</button></div></div><div class="notice error hidden" id="loginError"></div><button class="btn full" id="loginSubmit">MASUK KE ${roleTitle}</button></form><div class="login-note">Demo: ${email} / ${password}</div></div></section></main>`;bindLogin();hydrateAssets(qs('#app'));hideLoader()}
-function bindLogin(){
-  qs('#showPass').onclick=()=>{const x=qs('#loginPassword');x.type=x.type==='password'?'text':'password'};
-  qs('#loginForm').onsubmit=async e=>{
-    e.preventDefault();
-    const btn=qs('#loginSubmit');btn.disabled=true;btn.textContent='MEMVERIFIKASI...';
-    const email=qs('#loginEmail').value.trim().toLowerCase(),pass=qs('#loginPassword').value;
-    try{
-      let admin=null,apiToken='';
-      if(sharedDatabaseReady()){
-        const challenge=await apiRequest('adminChallenge',{email,role:PORTAL_MODE});
-        const passwordProof=await pbkdf2(pass,challenge.salt);
-        const remote=await apiRequest('loginAdmin',{email,password:pass,passwordProof,role:PORTAL_MODE});
-        admin=remote.admin;apiToken=remote.token;
-        if(remote.state){state=migrateState(remote.state);ensureRaceUpgrade();ensureBonusSystem();}
-      }else{
-        admin=state.admins.find(a=>a.email.toLowerCase()===email&&a.role===PORTAL_MODE&&a.status==='active');
-        let ok=false;if(admin){const hash=await pbkdf2(pass,admin.salt);ok=hash===admin.passwordHash}
-        if(!ok)throw new Error('Email, password, role, atau status akun tidak sesuai.');
-      }
-      const ttl=(Number(state.settings.sessionMinutes)||120)*60000;
-      saveSession({type:'admin',id:admin.id,name:admin.name,email:admin.email,role:admin.role,apiToken,expiresAt:Date.now()+ttl});
-      logActivity('Login dashboard berhasil.','login',admin.name);logAudit('LOGIN_SUCCESS',admin.email);
-      localStorage.setItem(APP_KEY,JSON.stringify(state));applyThemeVars();
-      location.hash='admin';
-    }catch(error){
-      qs('#loginError').classList.remove('hidden');qs('#loginError').textContent=error.message||'Login gagal.';
-      btn.disabled=false;btn.textContent='COBA LAGI';
-    }
-  };
-}
+function renderLogin(){saveSession(null);document.body.className='login-page';const isA2=PORTAL_MODE==='admin_second',cfg=state.theme.portal[PORTAL_MODE]||defaultPortal();const roleTitle=isA2?'ADMIN KEDUA':'SUPER ADMIN',heading=isA2?'Akses operasional terkontrol':'Pusat kendali penuh platform',description=isA2?'Kelola member, tiket, game, hadiah, dan asset sesuai permission yang diberikan Super Admin.':'Kelola branding, theme, background, admin, member, game, hadiah, audit, dan seluruh konfigurasi dari satu dashboard.';qs('#app').innerHTML=`<main class="login-shell">${portalMediaHTML(cfg)}<section class="login-visual"><div>${brandHTML('GAME PLATFORM CONTROL CENTER')}<h1>${isA2?'Operasional aman.<br>Brand tetap konsisten.':'Super Admin.<br>One control center.'}</h1><p>${description}</p></div><div class="feature-grid"><div class="feature"><b>Dynamic Branding</b><span class="muted small">Logo, warna, font, banner, dan media terpusat.</span></div><div class="feature"><b>Role Permission</b><span class="muted small">Akses Admin Kedua mengikuti izin Super Admin.</span></div><div class="feature"><b>Asset Validation</b><span class="muted small">Whitelist file, size limit, hash, dan history upload.</span></div><div class="feature"><b>Responsive 2026</b><span class="muted small">Desktop, tablet, dan mobile dalam satu sistem.</span></div></div></section><section class="login-panel">${brandHTML(roleTitle)}<div style="margin-top:30px"><span class="badge active">SECURE ROLE ACCESS</span><h2 style="font-size:2rem;margin:14px 0 8px">${heading}</h2><p class="muted">Masuk menggunakan akun ${roleTitle}.</p><form id="loginForm" class="stack" autocomplete="off"><div class="field"><label>Email</label><input class="input" id="loginEmail" type="email" autocomplete="off" placeholder="Masukkan email" required></div><div class="field"><label>Password</label><div class="password-wrap"><input class="input" id="loginPassword" type="password" autocomplete="new-password" placeholder="Masukkan password" required><button class="icon-btn" type="button" id="showPass">👁</button></div></div><div class="notice error hidden" id="loginError"></div><button class="btn full" id="loginSubmit">MASUK KE ${roleTitle}</button></form></div></section></main>`;bindLogin();hydrateAssets(qs('#app'));hideLoader()}
+function bindLogin(){qs('#showPass').onclick=()=>{const x=qs('#loginPassword');x.type=x.type==='password'?'text':'password'};qs('#loginForm').onsubmit=async e=>{e.preventDefault();const btn=qs('#loginSubmit');btn.disabled=true;btn.textContent='MEMVERIFIKASI...';const email=qs('#loginEmail').value.trim().toLowerCase(),pass=qs('#loginPassword').value,admin=state.admins.find(a=>a.email.toLowerCase()===email&&a.role===PORTAL_MODE&&a.status==='active');let ok=false;if(admin){const hash=await pbkdf2(pass,admin.salt);ok=hash===admin.passwordHash}if(!ok){qs('#loginError').classList.remove('hidden');qs('#loginError').textContent='Email, password, role, atau status akun tidak sesuai.';btn.disabled=false;btn.textContent='COBA LAGI';return}const ttl=(Number(state.settings.sessionMinutes)||120)*60000;saveSession({type:'admin',id:admin.id,name:admin.name,email:admin.email,role:admin.role,expiresAt:Date.now()+ttl});logActivity('Login dashboard berhasil.','login',admin.name);logAudit('LOGIN_SUCCESS',admin.email);saveState();location.hash='admin'}}
 const navItems=[['overview','⌂','Dashboard','dashboard'],['members','👥','Member Management','members'],['tickets','🎟','Data Tiket','tickets'],['games','🎮','Game Management','games'],['prizes','🎁','Prize & Bonus','prizes'],['raceconfig','🏁','Konfigurasi Balapan','prizes'],['theme','🎨','Theme Manager','theme'],['front','🖼','Game Front Customizer','front'],['uploads','☁','Asset Library','uploads'],['activity','◴','Activity History','activity'],['winners','🏆','Winner History','winners'],['audit','☷','Audit Log','audit'],['admins','🛡','Admin Management','admins'],['permissions','🔐','Permissions','permissions'],['settings','⚙','System Settings','settings'],['account','👤','Profil & Keamanan','account']];
 function renderDashboard(){if(!session||session.type!=='admin'||session.role!==PORTAL_MODE){saveSession(null);location.hash='';return}document.body.className='';const nav=navItems.filter(x=>permitted(x[3])).map(x=>`<button class="nav-btn ${currentPage===x[0]?'active':''}" data-page="${x[0]}"><span class="ico">${x[1]}</span>${x[2]}</button>`).join(''),dashRef=state.theme.dashboard.backgroundRef;qs('#app').innerHTML=`${dashRef?`<div class="dashboard-media">${assetTag(dashRef,state.theme.dashboard.backgroundType==='video'?'video':'image')}</div>`:''}<div class="app-shell"><aside class="sidebar" id="sidebar">${brandHTML('ADMIN CONTROL CENTER')}<div class="nav-scroll"><div class="nav-label">Platform</div>${nav}</div><div class="sidebar-bottom"><div class="profile-mini"><div class="avatar">${esc(initials(session.name))}</div><div class="truncate"><b>${esc(session.name)}</b><div class="muted small">${session.role==='super_admin'?'Super Admin':'Admin Kedua'}</div></div></div><button class="btn secondary full" id="logoutBtn" style="margin-top:13px">Logout</button></div></aside><main class="main"><header class="topbar"><div class="topbar-left grow"><button class="icon-btn mobile-only" id="menuBtn">☰</button><div class="search"><span>⌕</span><input class="input" id="globalSearch" placeholder="Cari member, asset, atau aktivitas..."></div></div><div class="topbar-right"><button class="btn secondary hide-mobile" id="memberLinkBtn">Buka Member</button><button class="icon-btn" id="refreshBtn">↻</button><div class="profile-mini hide-mobile"><div class="avatar">${esc(initials(session.name))}</div><div><b>${esc(session.name)}</b><div class="muted small">${session.role==='super_admin'?'Super Admin':'Admin Kedua'}</div></div></div></div></header><div class="content" id="pageHost"></div></main></div>`;bindShell();showPage(currentPage);hydrateAssets(qs('#app'));hideLoader()}
-function bindShell(){qsa('[data-page]').forEach(b=>b.onclick=()=>{currentPage=b.dataset.page;qsa('[data-page]').forEach(x=>x.classList.toggle('active',x===b));showPage(currentPage);qs('#sidebar').classList.remove('open')});qs('#logoutBtn').onclick=()=>{logActivity('Logout dari dashboard.','logout');logAudit('LOGOUT',session.email);saveState();saveSession(null);location.hash=''};qs('#memberLinkBtn').onclick=()=>window.open(systemUrls().member,'_blank');qs('#refreshBtn').onclick=async()=>{await pullSharedDatabase();showPage(currentPage)};qs('#menuBtn')?.addEventListener('click',()=>qs('#sidebar').classList.toggle('open'));qs('#globalSearch').oninput=e=>{const q=e.target.value.toLowerCase();qsa('tbody tr,.asset-card').forEach(el=>el.style.display=el.textContent.toLowerCase().includes(q)?'':'none')}}
+function bindShell(){qsa('[data-page]').forEach(b=>b.onclick=()=>{currentPage=b.dataset.page;qsa('[data-page]').forEach(x=>x.classList.toggle('active',x===b));showPage(currentPage);qs('#sidebar').classList.remove('open')});qs('#logoutBtn').onclick=()=>{logActivity('Logout dari dashboard.','logout');logAudit('LOGOUT',session.email);saveState();saveSession(null);location.hash=''};qs('#memberLinkBtn').onclick=()=>window.open(systemUrls().member,'_blank');qs('#refreshBtn').onclick=()=>showPage(currentPage);qs('#menuBtn')?.addEventListener('click',()=>qs('#sidebar').classList.toggle('open'));qs('#globalSearch').oninput=e=>{const q=e.target.value.toLowerCase();qsa('tbody tr,.asset-card').forEach(el=>el.style.display=el.textContent.toLowerCase().includes(q)?'':'none')}}
 const pageHead=(title,desc,tools='')=>`<section class="page"><div class="page-head"><div><h1>${title}</h1><p>${desc}</p></div><div class="row wrap">${tools}</div></div>`;
 const table=(heads,rows)=>`<div class="table-wrap"><table><thead><tr>${heads.map(h=>`<th>${h}</th>`).join('')}</tr></thead><tbody>${rows||`<tr><td colspan="${heads.length}" class="muted">Belum ada data.</td></tr>`}</tbody></table></div>`;
 const pages={
@@ -207,16 +211,16 @@ function bindRaceConfig(){qs('#raceConfigForm').onsubmit=e=>{e.preventDefault();
 let selectedRacer=0,raceActive=false,boosts=0,raceStartAt=0,racePositions=[0,0,0,0],initialTicketBatch=0;
 function racerVisual(c){return c.image?`<img src="${esc(c.image)}" alt="${esc(c.name)}">`:`<span style="font-size:52px">${c.icon||'🏃'}</span>`}
 function renderGame(){if(!session||session.type!=='member'){location.hash='';return}const m=state.members.find(x=>x.id===session.id);if(!m){saveSession(null);location.hash='';return}const g=state.games.find(x=>x.id===m.gameId),f=state.theme.front,bg=f.gameBackgroundRef||state.theme.portal.member.imageRef,cfg=state.raceConfig;initialTicketBatch=Number(m.tickets)||0;document.body.className='';qs('#app').innerHTML=`<main class="game-shell"><div class="game-media">${bg?assetTag(bg):'<div class="portal-fallback"></div>'}</div><div class="game-overlay"></div><div class="game-top"><div>${f.gameLogoRef?assetTag(f.gameLogoRef,'image','brand-logo'):brandHTML(g?.name||'MINIGAME')}<div class="muted small">Member: ${esc(m.userId)}</div></div><div class="row wrap"><span class="badge active">🎟 Tiket: <b id="ticketCount">${m.tickets}</b></span><button class="btn secondary" id="exitGame">Keluar</button></div></div><section class="card arena-card"><div id="selectionPanel"><h2>Pilih 1 karakter kamu</h2><div class="character-grid">${cfg.characters.map((c,i)=>`<button class="character-choice ${i===0?'selected':''}" data-racer="${i}">${racerVisual(c)}<b>${esc(c.name)}</b></button>`).join('')}</div><button class="btn success full" id="startRace">MULAI BALAPAN 12 DETIK</button></div><div class="arena race-arena hidden" id="raceArena"><div class="crowd">${['🙌','🎉','👏','🥳','🇮🇩','🙌','🎊','👏'].map(x=>`<span>${x}</span>`).join('')}</div><div class="finish"></div>${[0,1,2,3].map(i=>`<div class="race-lane l${i+1}"></div><div class="race-avatar" id="raceAvatar${i}" style="top:${25+i*15}%">${racerVisual(cfg.characters[i])}</div>`).join('')}</div><div class="race-hud hidden" id="raceHud"><div><b>BOOST</b><div class="boost-meter"><span id="boostMeter"></span></div><small id="boostCount">0 dorongan</small></div><button class="btn success boost-btn" id="boostBtn">⚡ DORONG / BOOST</button><div class="race-clock" id="raceClock">12.0</div></div><div class="game-status"><h2 id="gameTitle">Siap menjadi juara?</h2><p class="muted" id="gameText">Tanpa boost, karakter kamu akan kalah.</p></div></section></main><div class="result-modal hidden" id="resultModal"><div class="card result-box"><div style="font-size:64px" id="resultIcon">🎁</div><h2 id="resultTitle">HASIL PERMAINAN</h2><p class="muted" id="winnerText"></p><div class="prize-lines" id="prizeText"></div><button class="btn full" id="playAgain">GUNAKAN TIKET BERIKUTNYA</button><button class="btn secondary full" id="backMember" style="margin-top:9px">KEMBALI KE MEMBER</button></div></div>`;qsa('[data-racer]').forEach(b=>b.onclick=()=>{selectedRacer=Number(b.dataset.racer);qsa('[data-racer]').forEach(x=>x.classList.toggle('selected',x===b))});qs('#startRace').onclick=startRace;qs('#boostBtn').onclick=doBoost;qs('#playAgain').onclick=()=>{qs('#resultModal').classList.add('hidden');resetRace()};qs('#exitGame').onclick=qs('#backMember').onclick=()=>{saveSession(null);location.hash=''};hydrateAssets(qs('#app'));hideLoader()}
-function resetRace(){raceActive=false;racePositions=[0,0,0,0];boosts=0;qs('#selectionPanel')?.classList.remove('hidden');qs('#raceArena')?.classList.add('hidden');qs('#raceHud')?.classList.add('hidden')}
+function resetRace(){raceActive=false;racePositions=[0,0,0,0];boosts=0;qs('#selectionPanel')?.classList.remove('hidden');qs('#raceArena')?.classList.add('hidden');qs('#raceHud')?.classList.add('hidden');qs('#gameTitle').textContent='Pilih karakter untuk tiket berikutnya';qs('#gameText').textContent='Tekan boost berkali-kali agar menang.'}
 function doBoost(){if(!raceActive)return;boosts++;racePositions[selectedRacer]+=2.3+Math.random()*1.6;qs('#boostCount').textContent=`${boosts} dorongan`;qs('#boostMeter').style.width=`${Math.min(100,boosts/(state.raceConfig.minBoosts*1.5)*100)}%`}
-function startRace(){const m=state.members.find(x=>x.id===session.id);if(!m||m.tickets<=0){toast('Tiket sudah habis. Hubungi Admin.','error');return}m.tickets--;saveState();qs('#ticketCount').textContent=m.tickets;qs('#selectionPanel').classList.add('hidden');qs('#raceArena').classList.remove('hidden');qs('#raceHud').classList.remove('hidden');qs(`#raceAvatar${selectedRacer}`).classList.add('player','camera-focus');raceActive=true;boosts=0;racePositions=[0,0,0,0];raceStartAt=performance.now();const duration=12000,max=Math.max(250,qs('#raceArena').clientWidth-145);clearInterval(raceTimer);raceTimer=setInterval(()=>{const remain=Math.max(0,duration-(performance.now()-raceStartAt));qs('#raceClock').textContent=(remain/1000).toFixed(1);for(let i=0;i<4;i++){if(i!==selectedRacer)racePositions[i]+=.62+Math.random()*.48;qs(`#raceAvatar${i}`).style.transform=`translateX(${Math.min(max,racePositions[i]/100*max)}px)`}if(remain<=0){clearInterval(raceTimer);raceActive=false;const winner=racePositions.indexOf(Math.max(...racePositions));finishRace(m,state.games.find(x=>x.id===m.gameId),winner===selectedRacer&&boosts>=state.raceConfig.minBoosts,winner)}},80)}
+function startRace(){const m=state.members.find(x=>x.id===session.id);if(!m||m.tickets<=0){toast('Tiket sudah habis. Hubungi Admin.','error');return}m.tickets--;saveState();qs('#ticketCount').textContent=m.tickets;qs('#selectionPanel').classList.add('hidden');qs('#raceArena').classList.remove('hidden');qs('#raceHud').classList.remove('hidden');qs(`#raceAvatar${selectedRacer}`).classList.add('player','camera-focus');raceActive=true;boosts=0;racePositions=[0,0,0,0];raceStartAt=performance.now();const duration=(Number(state.raceConfig.duration)||12)*1000,max=Math.max(250,qs('#raceArena').clientWidth-145);clearInterval(raceTimer);raceTimer=setInterval(()=>{const elapsed=performance.now()-raceStartAt,remain=Math.max(0,duration-elapsed);qs('#raceClock').textContent=(remain/1000).toFixed(1);for(let i=0;i<4;i++){if(i!==selectedRacer)racePositions[i]+=.62+Math.random()*.48;const pos=Math.min(max,racePositions[i]/100*max);qs(`#raceAvatar${i}`).style.transform=`translateX(${pos}px) scale(${i===selectedRacer?1.1:1})`}if(remain<=0){clearInterval(raceTimer);raceActive=false;const winner=racePositions.indexOf(Math.max(...racePositions)),won=winner===selectedRacer&&boosts>=state.raceConfig.minBoosts;finishRace(m,state.games.find(x=>x.id===m.gameId),won,winner)}},80)}
 function rewardText(slot){if(slot.type==='coupon1')return state.raceConfig.coupon1;if(slot.type==='coupon2')return state.raceConfig.coupon2;if(slot.type==='combo')return `Saldo ${rupiah(slot.amount||10000)}\n${state.raceConfig.sportsbookLabel}`;return slot.label||`Saldo ${rupiah(slot.amount||0)}`}
-function finishRace(m,game,won,winnerIndex){const attempt=Math.max(1,initialTicketBatch-Number(m.tickets)),slot=state.raceConfig.rewardSlots[Math.min(attempt-1,2)];qs('#resultModal').classList.remove('hidden');qs('#playAgain').classList.toggle('hidden',m.tickets<=0);if(!won){qs('#resultIcon').textContent='😔';qs('#resultTitle').textContent='SILAKAN COBA LAGI';qs('#winnerText').textContent=`${state.raceConfig.characters[winnerIndex].name} memenangkan balapan.`;qs('#prizeText').textContent='SILAKAN COBA LAGI HUBUNGI ADMIN'}else{const text=rewardText(slot);qs('#resultTitle').textContent='SELAMAT!';qs('#winnerText').textContent=`${state.raceConfig.characters[selectedRacer].name} menjadi juara.`;qs('#prizeText').textContent=`Selamat kamu mendapatkan:\n${text}`;state.winners.unshift({id:uid(),userId:m.userId,memberId:m.id,gameName:game.name,prizeName:text,value:slot.amount||0,winner:state.raceConfig.characters[selectedRacer].name,createdAt:now()})}saveState()}
+function finishRace(m,game,won,winnerIndex){const attempt=Math.max(1,initialTicketBatch-Number(m.tickets)),slot=state.raceConfig.rewardSlots[Math.min(attempt-1,state.raceConfig.rewardSlots.length-1)];qs('#resultModal').classList.remove('hidden');qs('#playAgain').classList.toggle('hidden',m.tickets<=0);if(!won){qs('#resultIcon').textContent='😔';qs('#resultTitle').textContent='SILAKAN COBA LAGI';qs('#winnerText').textContent=`${state.raceConfig.characters[winnerIndex].name} memenangkan balapan.`;qs('#prizeText').textContent='SILAKAN COBA LAGI HUBUNGI ADMIN';logActivity(`${m.userId} kalah pada permainan ke-${attempt}.`,'game',m.userId)}else{const text=rewardText(slot);qs('#resultIcon').textContent='🎁';qs('#resultTitle').textContent='SELAMAT!';qs('#winnerText').textContent=`${state.raceConfig.characters[selectedRacer].name} menjadi juara.`;qs('#prizeText').textContent=`Selamat kamu mendapatkan:\n${text}`;state.winners.unshift({id:uid(),userId:m.userId,memberId:m.id,gameName:game.name,prizeName:text,value:slot.amount||0,winner:state.raceConfig.characters[selectedRacer].name,createdAt:now()});logActivity(`${m.userId} memenangkan ${text}.`,'game',m.userId)}saveState()}
 function hideLoader(){const l=qs('#loadingScreen');if(!l)return;if(!state.theme.loadingScreen){l.remove();return}const text=l.querySelector('.muted');if(text)text.textContent=state.theme.loadingText||'Memuat...';setTimeout(()=>l.classList.add('hide'),250);setTimeout(()=>l.remove(),700)}
 /* ===== GOOGLE SHEETS REALTIME RACE HISTORY =====
    Setelah Code.gs dideploy, ganti URL di bawah dengan URL Web App /exec. */
-const RACE_API_URL='https://script.google.com/macros/s/AKfycbwBIGr4zj-t_dKumwyLs6HWm8ZLIv2SYlpHzvN9L5Vszn-2tVc9T_qPk7xMox1042jU/exec';
-const RACE_API_TOKEN='';
+const RACE_API_URL='PASTE_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE';
+const RACE_API_TOKEN='GANTI_DENGAN_TOKEN_RAHASIA_YANG_SAMA';
 let remoteRaceHistory=[];
 function raceApiReady(){return /^https:\/\/script\.google\.com\/macros\/s\/[^/]+\/exec/.test(RACE_API_URL)}
 async function raceApi(action,data={}){
@@ -254,36 +258,17 @@ const BONUS_CATEGORIES=Object.freeze({
   coupon_combo:{label:'Coupon 4 – Saldo + Freechip Sportbook',unit:'Tiket',inputLabel:'Jumlah Tiket',icon:'⚽'}
 });
 const ADMIN2_ALLOWED_MENUS=new Set(['dashboard','members','tickets','activity','winners','account']);
-const DEFAULT_SHARED_DATABASE_API_URL='https://script.google.com/macros/s/AKfycbwBIGr4zj-t_dKumwyLs6HWm8ZLIv2SYlpHzvN9L5Vszn-2tVc9T_qPk7xMox1042jU/exec';
-const SHARED_DATABASE_API_URL=(new URLSearchParams(location.search).get('api')||localStorage.getItem('ceriabet_shared_api_url')||DEFAULT_SHARED_DATABASE_API_URL).trim();
-if(new URLSearchParams(location.search).get('api'))localStorage.setItem('ceriabet_shared_api_url',SHARED_DATABASE_API_URL);
-const SHARED_DATABASE_API_TOKEN='';
+const SHARED_DATABASE_API_URL='PASTE_SHARED_DATABASE_API_URL_HERE';
+const SHARED_DATABASE_API_TOKEN='GANTI_DENGAN_TOKEN_SERVER';
 let remoteSyncTimer=null;
 let remoteSyncInFlight=false;
 
 
-function currentApiToken(){return session?.apiToken||''}
-async function apiRequest(action,payload={}){
-  if(!sharedDatabaseReady())throw new Error('Endpoint database bersama belum dikonfigurasi.');
-  const response=await fetch(SHARED_DATABASE_API_URL,{
-    method:'POST',
-    headers:{'Content-Type':'text/plain;charset=utf-8'},
-    body:JSON.stringify({action,...payload}),
-    cache:'no-store',
-    redirect:'follow'
-  });
-  if(!response.ok)throw new Error(`HTTP ${response.status}: server database tidak dapat diakses.`);
-  const json=await response.json();
-  if(json.success===false)throw new Error(json.message||'Permintaan database gagal.');
-  return json;
-}
-
 function systemUrls(){
-  return{
-    super:'https://zaramanis1233-wq.github.io/RAJA-BALAP-KARUNG-SULTAN/',
-    admin2:'https://zaramanis1233-wq.github.io/RAJA-BALAP-KARUNG-SULTAN-admin2-login/',
-    member:'https://zaramanis1233-wq.github.io/RAJA-BALAP-KARUNG-SULTAN-LOGIN-MEMBER/'
-  };
+  const current=rootUrl();
+  const superUrl=DEFAULT_PORTAL_MODE==='super_admin'?current:'https://zaramanis1233-wq.github.io/RAJA-BALAP-KARUNG-SULTAN/';
+  const admin2Url=DEFAULT_PORTAL_MODE==='admin_second'?current:'https://zaramanis1233-wq.github.io/RAJA-BALAP-KARUNG-SULTAN-admin2-login/';
+  return{super:superUrl,admin2:admin2Url,member:`${current}?portal=member`};
 }
 
 function sharedDatabaseReady(){
@@ -645,15 +630,15 @@ function remoteOperationalPayload(){
   return{scope:'full_access',role:PORTAL_MODE,state};
 }
 async function pushSharedDatabase(){
-  if(!sharedDatabaseReady()||!currentApiToken()||remoteSyncInFlight)return;
+  if(!sharedDatabaseReady()||remoteSyncInFlight)return;
   remoteSyncInFlight=true;
   try{
     const res=await fetch(SHARED_DATABASE_API_URL,{
-      method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},
-      body:JSON.stringify({action:'savePlatformState',token:currentApiToken(),baseVersion:Number(state._serverVersion||0),...remoteOperationalPayload()})
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({action:'savePlatformState',token:SHARED_DATABASE_API_TOKEN,...remoteOperationalPayload()})
     });
     if(!res.ok)throw new Error('Server database menolak penyimpanan.');
-    const json=await res.json();if(json.success===false)throw new Error(json.message||'Penyimpanan server gagal.');if(json.stateVersion)state._serverVersion=Number(json.stateVersion);
+    const json=await res.json();if(json.success===false)throw new Error(json.message||'Penyimpanan server gagal.');
   }catch(err){console.error('Shared database save:',err)}
   finally{remoteSyncInFlight=false}
 }
@@ -662,10 +647,10 @@ function queueRemoteSync(){
   clearTimeout(remoteSyncTimer);remoteSyncTimer=setTimeout(pushSharedDatabase,450);
 }
 async function pullSharedDatabase(){
-  if(!sharedDatabaseReady()||!currentApiToken())return;
+  if(!sharedDatabaseReady())return;
   try{
     const url=new URL(SHARED_DATABASE_API_URL);
-    url.searchParams.set('action','loadPlatformState');url.searchParams.set('token',currentApiToken());url.searchParams.set('role',PORTAL_MODE);url.searchParams.set('_',Date.now());
+    url.searchParams.set('action','loadPlatformState');url.searchParams.set('token',SHARED_DATABASE_API_TOKEN);url.searchParams.set('role',PORTAL_MODE);url.searchParams.set('_',Date.now());
     const res=await fetch(url,{cache:'no-store'});if(!res.ok)throw new Error('Database bersama tidak dapat dibaca.');
     const json=await res.json();if(json.success===false)throw new Error(json.message||'Load database gagal.');
     if(json.state)state=migrateState(json.state);
@@ -684,19 +669,14 @@ function saveState(){
   }catch(e){toast('Penyimpanan browser penuh. Pasang database bersama untuk data produksi.','error')}
 }
 async function bootstrapApplication(){
-  if(session?.apiToken)await pullSharedDatabase();
+  await pullSharedDatabase();
   ensureBonusSystem();
-  try{localStorage.setItem(APP_KEY,JSON.stringify(state));applyThemeVars()}catch{}
+  saveState();
   route();
 }
 syncChannel?.addEventListener('message',e=>{if(e.data?.type==='STATE_UPDATED'){ensureBonusSystem()}});
 
 bootstrapApplication();
-setInterval(async()=>{
-  if(!session?.apiToken||!sharedDatabaseReady()||document.visibilityState!=='visible'||remoteSyncInFlight)return;
-  await pullSharedDatabase();
-  if(['overview','members','tickets','activity','winners'].includes(currentPage)&&location.hash==='#admin')showPage(currentPage);
-},10000);
 </script>
 </body>
 </html>
